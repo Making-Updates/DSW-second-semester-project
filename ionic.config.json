@@ -1,0 +1,7 @@
+{
+  "name": "second-semester-project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
