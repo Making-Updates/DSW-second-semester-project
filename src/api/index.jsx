@@ -32,9 +32,11 @@ export const fetchMlhData = async () => {
 	}
 };
 
-export const fetchQuizData = async (category, difficulty) => {
+export const fetchQuizData = async (category, difficulty, tag) => {
 	try {
-		const data = await axios.get(`${quizURL}/${category}/${difficulty}/10`);
+		const data = await axios.get(
+			`${quizURL}/${category}/${difficulty}/10/${tag}`
+		);
 		return data;
 	} catch (error) {
 		return error;
