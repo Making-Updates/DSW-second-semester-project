@@ -29,6 +29,9 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+/* Bootstrap CSS */
+import './bootstrap/css/bootstrap.css';
+
 const App = () => {
   return (
     <IonApp>
