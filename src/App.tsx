@@ -9,6 +9,9 @@ import QuizLeaderboard from './pages/QuizLeaderboard';
 import Settings from './pages/Settings';
 import Twitter from './pages/Twitter';
 import Youtube from './pages/Youtube';
+import Login from './pages/LoginPage';
+import Register from './pages/RegisterPage';
+import Forgot from './pages/ForgotPassword';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -59,6 +62,15 @@ const App = () => {
             </Route>
             <Route path="/page/Youtube" exact={true}>
               <Youtube />
+            </Route>
+            <Route path="/page/Login" exact={true}>
+              <Login />
+            </Route>
+            <Route path="/page/Register" exact={true}>
+              <Register />
+            </Route>
+            <Route path="/page/Forgot" exact={true}>
+              <Forgot />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
