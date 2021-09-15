@@ -35,48 +35,54 @@ import './theme/variables.css';
 /* Bootstrap CSS */
 import './bootstrap/css/bootstrap.css';
 
+import { UserContext } from './context/UserContext';
+import { useState } from 'react';
+
 const App = () => {
-  return (
-    <IonApp>
-      <IonReactRouter>
-        <IonSplitPane contentId="main">
-          <Menu />
-          <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
-              <Redirect to="/page/Mlh" />
-            </Route>
-            <Route path="/page/Mlh" exact={true}>
-              <Mlh />
-            </Route>
-            <Route path="/page/Quiz" exact={true}>
-              <Quiz />
-            </Route>
-            <Route path="/page/QuizLeaderboard" exact={true}>
-              <QuizLeaderboard />
-            </Route>
-            <Route path="/page/Settings" exact={true}>
-              <Settings />
-            </Route>
-            <Route path="/page/Twitter" exact={true}>
-              <Twitter />
-            </Route>
-            <Route path="/page/Youtube" exact={true}>
-              <Youtube />
-            </Route>
-            <Route path="/page/Login" exact={true}>
-              <Login />
-            </Route>
-            <Route path="/page/Register" exact={true}>
-              <Register />
-            </Route>
-            <Route path="/page/Forgot" exact={true}>
-              <Forgot />
-            </Route>
-          </IonRouterOutlet>
-        </IonSplitPane>
-      </IonReactRouter>
-    </IonApp>
-  );
+	const [user, setUser] = useState('Not Logged In');
+	return (
+		<UserContext.Provider value={[user, setUser]}>
+			<IonApp>
+				<IonReactRouter>
+					<IonSplitPane contentId='main'>
+						<Menu />
+						<IonRouterOutlet id='main'>
+							<Route path='/' exact={true}>
+								<Redirect to='/page/Mlh' />
+							</Route>
+							<Route path='/page/Mlh' exact={true}>
+								<Mlh />
+							</Route>
+							<Route path='/page/Quiz' exact={true}>
+								<Quiz />
+							</Route>
+							<Route path='/page/QuizLeaderboard' exact={true}>
+								<QuizLeaderboard />
+							</Route>
+							<Route path='/page/Settings' exact={true}>
+								<Settings />
+							</Route>
+							<Route path='/page/Twitter' exact={true}>
+								<Twitter />
+							</Route>
+							<Route path='/page/Youtube' exact={true}>
+								<Youtube />
+							</Route>
+							<Route path='/page/Login' exact={true}>
+								<Login />
+							</Route>
+							<Route path='/page/Register' exact={true}>
+								<Register />
+							</Route>
+							<Route path='/page/Forgot' exact={true}>
+								<Forgot />
+							</Route>
+						</IonRouterOutlet>
+					</IonSplitPane>
+				</IonReactRouter>
+			</IonApp>
+		</UserContext.Provider>
+	);
 };
 
 export default App;
