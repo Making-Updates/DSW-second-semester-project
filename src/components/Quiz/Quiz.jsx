@@ -53,7 +53,6 @@ function Quiz({ data }) {
 			</div>
 			<form>
 				{console.log(data[currentQuestionNo])}
-				{/* <h3>{data[currentQuestionNo].question}</h3> */}
 				<div className='mb-2 p-2 text-center align-middle'>
 					{data[currentQuestionNo].question}
 				</div>
@@ -65,42 +64,34 @@ function Quiz({ data }) {
 						if (data[currentQuestionNo].answers[key] !== null)
 							return (
 								<>
-									<div className='form-check'>
-										<input
-											className='form-check-input'
-											type='radio'
-											name='answer'
-											id={key}
-											value={key}
-											onChange={(e) => {
-												changeSelectedAnswer(e);
-											}}
-										/>
-										<label
-											className='form-check-label'
-											htmlFor={key}
-										>
-											{
-												data[currentQuestionNo].answers[
-													key
-												]
-											}
-										</label>
+									<div
+										className='form-check mx-5 d-flex flex-row'
+										key={key}
+									>
+										<div className='ml-5 d-flex justify-content-start'>
+											<input
+												className='form-check-input'
+												type='radio'
+												name='answer'
+												id={key}
+												value={key}
+												onChange={(e) => {
+													changeSelectedAnswer(e);
+												}}
+											/>
+										</div>
+										<div className=' mx-2 d-flex justify-content-center'>
+											<label
+												className='form-check-label'
+												htmlFor={key}
+											>
+												{
+													data[currentQuestionNo]
+														.answers[key]
+												}
+											</label>
+										</div>
 									</div>
-
-									{/* <input
-									type='radio'
-									id={key}
-									name='answer'
-									value={key}
-									key={key}
-									onChange={(e) => {
-										changeSelectedAnswer(e);
-									}}
-								/>
-								<label htmlFor={key}>
-									{data[currentQuestionNo].answers[key]}
-								</label> */}
 									<br />
 								</>
 							);
