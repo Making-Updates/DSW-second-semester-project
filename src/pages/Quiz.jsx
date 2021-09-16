@@ -8,11 +8,13 @@ import {
 	IonToolbar,
 	useIonViewDidEnter,
 	useIonViewDidLeave,
+	useIonViewWillEnter,
 } from '@ionic/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Quiz from '../components/Quiz/Quiz';
 import DifficultySelect from '../components/Quiz/DifficultySelect';
 import CategorySelect from '../components/Quiz/CategorySelect';
+import Offline from '../components/Quiz/Offline';
 import {
 	QuizCategoryContext,
 	QuizDifficultyContext,
@@ -23,6 +25,7 @@ import {
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
 import { fetchQuizData } from '../api';
 import Score from '../components/Quiz/Score';
+import { Network } from '@capacitor/network';
 
 const Page = () => {
 	const [page, setPage] = useState(null);
@@ -34,28 +37,38 @@ const Page = () => {
 	const [quizData, setQuizData] = useState(null);
 	const [error, setError] = useState(false);
 	const [errorMessage, setErrorMessage] = useState(null);
+	const [networkStatus, setNetworkStatus] = useState(false);
+	const [netStat, setNetStat] = useState(false);
+
+	const logCurrentNetworkStatus = async () => {
+		const status = await Network.getStatus();
+		if (status.connected === true) {
+			setPage('category');
+		} else if (status.connected === false) {
+			setPage('offline');
+		}
+
+		setIsLoading(false);
+	};
+
+	function setDefaultOptions() {
+		setCategory(null);
+		setDifficulty(null);
+		setError(false);
+		setErrorMessage(null);
+		setQuizData(null);
+		setScore(0);
+		setShowScore(false);
+	}
 
 	useIonViewDidEnter(() => {
-		setCategory(null);
-		setDifficulty(null);
-		setPage(null);
-		setIsLoading(false);
-		setError(false);
-		setErrorMessage(null);
-		setQuizData(null);
-		setScore(0);
-		setShowScore(false);
+		setDefaultOptions();
+		setIsLoading(true);
+		logCurrentNetworkStatus();
 	});
+
 	useIonViewDidLeave(() => {
-		setCategory(null);
-		setDifficulty(null);
-		setPage(null);
-		setIsLoading(false);
-		setError(false);
-		setErrorMessage(null);
-		setQuizData(null);
-		setScore(0);
-		setShowScore(false);
+		setPage('category');
 	});
 
 	function renderSwitch(param) {
@@ -74,6 +87,8 @@ const Page = () => {
 						difficulty={difficulty}
 					/>
 				);
+			case 'offline':
+				return <Offline />;
 			default:
 				return <CategorySelect />;
 		}
@@ -106,6 +121,15 @@ const Page = () => {
 			setPage('score');
 		}
 	}, [showScore]);
+
+	Network.addListener('networkStatusChange', (status) => {
+		if (status.connected === true) {
+			setDefaultOptions();
+			setPage('category');
+		} else if (status.connected === false) {
+			setPage('offline');
+		}
+	});
 
 	return (
 		<QuizCategoryContext.Provider value={[category, setCategory]}>
