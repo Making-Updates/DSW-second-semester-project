@@ -11,7 +11,8 @@ import Twitter from './pages/Twitter';
 import Youtube from './pages/Youtube';
 import Login from './pages/LoginPage';
 import Register from './pages/RegisterPage';
-import Forgot from './pages/ForgotPassword';
+import Update from './pages/UpdatePassword';
+import About from './pages/About';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,7 +34,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 /* Bootstrap CSS */
-import './bootstrap/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { UserContext } from './context/UserContext';
 import { useState } from 'react';
@@ -74,8 +75,11 @@ const App = () => {
 							<Route path='/page/Register' exact={true}>
 								<Register />
 							</Route>
-							<Route path='/page/Forgot' exact={true}>
-								<Forgot />
+							<Route path='/page/Update' exact={true}>
+								<Update />
+							</Route>
+							<Route path='/page/About' exact={true}>
+								<About />
 							</Route>
 						</IonRouterOutlet>
 					</IonSplitPane>
