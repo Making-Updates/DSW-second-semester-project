@@ -1,0 +1,28 @@
+table, td, th {
+    border: 1px solid black !important; 
+}
+/*  */
+table { 
+width: 100%; 
+border-collapse: collapse; 
+}
+/* create different colors for body rows */
+tr:nth-of-type(odd) { 
+background: #eee; 
+}
+/*  create a unique style for the table head */
+th { 
+background: #333; 
+color: white; 
+font-weight: bold; 
+}
+/* create borders around the table cells */
+td, th { 
+padding: 6px; 
+border: 1px solid #ccc; 
+text-align: center; 
+}
+/*  */
+.title{
+padding-left: 10%;
+}
