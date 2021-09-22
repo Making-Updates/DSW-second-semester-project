@@ -7,7 +7,7 @@ import {
 	IonTitle,
 	IonToolbar,
 } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import UpdatePasswordForm from '../components/UpdatePasswordForm/UpdatePasswordForm';
 
 const Page = () => {
 	return (
@@ -27,8 +27,8 @@ const Page = () => {
 						<IonTitle size='large'>Update Password</IonTitle>
 					</IonToolbar>
 				</IonHeader>
-				{/* Insert components under here */}
-				<ExploreContainer name='Forgot Password' />
+
+				<UpdatePasswordForm />
 			</IonContent>
 		</IonPage>
 	);
