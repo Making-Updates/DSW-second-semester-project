@@ -14,6 +14,7 @@ function RegisterForm() {
 
 	const submitController = (e) => {
 		e.preventDefault();
+		
 		// https://github.com/supabase/supabase/blob/6b678ced6fa0e5eecdb731ea36b9e1507f6fb11d/examples/javascript-auth/index.js#L27
 		// From line 27 to 34
 		// By repsonse.error, instead include an if else statement
