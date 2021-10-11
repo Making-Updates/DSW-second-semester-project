@@ -14,12 +14,21 @@ function RegisterForm() {
 
 	const submitController = (e) => {
 		e.preventDefault();
-		
-		// https://github.com/supabase/supabase/blob/6b678ced6fa0e5eecdb731ea36b9e1507f6fb11d/examples/javascript-auth/index.js#L27
-		// From line 27 to 34
-		// By repsonse.error, instead include an if else statement
-		// if (response.error) then set error to true and the error message
-		// else do set user to response.user.email then history.push('/page/Login')
+		supabase.auth
+			.signUp({ email, password })
+			.then((response) => {
+				if (response.error) {
+					setError(true);
+					setErrorMessage(response.error.message);
+				} else {
+					setUser(response.user.email);
+					history.push('/page/Register');
+				}
+			})
+			.catch((err) => {
+				setError(true);
+				setErrorMessage(err.response.text);
+			});
 	};
 
 	return (
