@@ -1,88 +1,61 @@
 import { useState, useEffect } from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar,IonLabel, IonSegment, IonSegmentButton } from '@ionic/react';
+import {
+	IonButtons,
+	IonContent,
+	IonHeader,
+	IonMenuButton,
+	IonPage,
+	IonTitle,
+	IonToolbar,
+	IonLabel,
+	IonSegment,
+	IonSegmentButton,
+} from '@ionic/react';
 import { supabase } from '../supabase';
-import ExploreContainer from '../components/ExploreContainer';
-//import '../theme/leaderboard.css'
 import Leaderboard from '../components/Leaderboard/Leaderboard';
+import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
 
 const Page = () => {
+	const [category, setCategory] = useState(null);
+	const [difficulty, setDifficulty] = useState(null);
+	const [isLoading, setIsLoading] = useState(true);
+	const [tableData, setTableData] = useState([]);
 
-    const [category, setCategory] = useState("php");
-    const [difficulty, setDifficulty] = useState("easy");
-    const [loading, setLoading] = useState(true);
-    const [tableData, setTableData] = useState([]);
+	useEffect(() => {
+		if (difficulty != null && category != null) {
+			setIsLoading(true);
+			async function select() {
+				const { data, error } = await supabase
+					.from(category + difficulty)
+					.select()
+					.order('score', { ascending: false });
+				console.log(data);
+				setTableData(data);
+				setIsLoading(false);
+			}
+			select();
+		}
+	}, [category, difficulty]);
 
-    function handleCategoryChange(e){
-        setCategory(e.detail.value);
-        async function select() {
-            const { data, error } = await supabase.from(category+difficulty).select().order('score', { ascending: false });
-            console.log(data);
-            setTableData(data);
-        }
-        select();
-    }
-    function handleDifficultyChange(e){
-        setDifficulty(e.detail.value);
-        async function select() {
-            const { data, error } = await supabase.from(category+difficulty).select().order('score', { ascending: false });
-            console.log(data);
-            setTableData(data);
-        }
-        select();
-    }
-    //
-    useEffect(()=>{async function select() {
-        const { data, error } = await supabase.from(category+difficulty).select().order('score', { ascending: false });
-        console.log(data);
-        setTableData(data);
-    }
-    select();}, [])
-    //
+	return (
+		<IonPage>
+			<IonHeader>
+				<IonToolbar>
+					<IonButtons slot='start'>
+						<IonMenuButton />
+					</IonButtons>
+					<IonTitle>Quiz Leaderboard</IonTitle>
+				</IonToolbar>
+			</IonHeader>
 
-    return (
-        <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonButtons slot="start">
-                        <IonMenuButton />
-                    </IonButtons>
-                    <IonTitle>Quiz Leaderboard</IonTitle>
-                </IonToolbar>
-            </IonHeader>
+			<IonContent fullscreen>
+				<IonHeader collapse='condense'>
+					<IonToolbar>
+						<IonTitle size='large'>Quiz leaderboard</IonTitle>
+					</IonToolbar>
+				</IonHeader>
 
-            <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">Quiz leaderboard</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                {/* Insert components under here */}
-                {/* <IonSegment onIonChange={handleCategoryChange} value="php">
-                    <IonSegmentButton value="php">
-                        <IonLabel>php</IonLabel>
-                    </IonSegmentButton>
-                    <IonSegmentButton value="mysql">
-                        <IonLabel>mysql</IonLabel>
-                    </IonSegmentButton>
-                    <IonSegmentButton value="html">
-                        <IonLabel>html</IonLabel>
-                    </IonSegmentButton>
-                </IonSegment>
-                <IonSegment onIonChange={handleDifficultyChange} value="easy">
-                    <IonSegmentButton value="easy">
-                        <IonLabel>easy</IonLabel>
-                    </IonSegmentButton>
-                    <IonSegmentButton value="medium">
-                        <IonLabel>medium</IonLabel>
-                    </IonSegmentButton>
-                    <IonSegmentButton value="hard">
-                        <IonLabel>hard</IonLabel>
-                    </IonSegmentButton>
-                </IonSegment> */}
-                <IonSegment
-					onIonChange={handleCategoryChange}
-					value='php'
-				>
+				<IonSegment onIonChange={(e) => setCategory(e.detail.value)}>
 					<IonSegmentButton value='php'>
 						<IonLabel>PHP</IonLabel>
 					</IonSegmentButton>
@@ -93,10 +66,7 @@ const Page = () => {
 						<IonLabel>HTML</IonLabel>
 					</IonSegmentButton>
 				</IonSegment>
-				<IonSegment
-					onIonChange={handleDifficultyChange}
-					value='easy'
-				>
+				<IonSegment onIonChange={(e) => setDifficulty(e.detail.value)}>
 					<IonSegmentButton value='easy'>
 						<IonLabel>Easy</IonLabel>
 					</IonSegmentButton>
@@ -106,14 +76,20 @@ const Page = () => {
 					<IonSegmentButton value='hard'>
 						<IonLabel>Hard</IonLabel>
 					</IonSegmentButton>
-                </IonSegment>
-                <Leaderboard 
-                data = {tableData}
-                />
-                {/* <ExploreContainer name="Quiz Leaderboard" /> */}
-            </IonContent>
-        </IonPage>
-    );
+				</IonSegment>
+
+				{category === null || difficulty === null ? (
+					<div className='mt-5 text-center align-middle display-4'>
+						Choose A Category and Difficulty
+					</div>
+				) : isLoading ? (
+					<LoadingIcon />
+				) : (
+					<Leaderboard data={tableData} />
+				)}
+			</IonContent>
+		</IonPage>
+	);
 };
 
 export default Page;
