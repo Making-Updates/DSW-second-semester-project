@@ -22,7 +22,7 @@ function LoginForm() {
 					setErrorMessage(response.error.message);
 				} else {
 					setUser(response.user.email);
-					history.push('/page/Login');
+					history.push('/page/Mlh');
 				}
 			})
 			.catch((err) => {
