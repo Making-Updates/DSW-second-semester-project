@@ -15,7 +15,7 @@ function LoginForm() {
 	const submitController = (e) => {
 		e.preventDefault();
 		supabase.auth
-			.signUp({ email, password })
+			.signin({ email, password })
 			.then((response) => {
 				if (response.error) {
 					setError(true);
