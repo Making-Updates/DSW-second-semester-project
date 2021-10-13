@@ -1,5 +1,6 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import Youtube from '../components/Youtube/Youtube';
 
 const Page = () => {
 
@@ -21,7 +22,8 @@ const Page = () => {
                     </IonToolbar>
                 </IonHeader>
                 {/* Insert components under here */}
-                <ExploreContainer name="Youtube" />
+                <Youtube />
+                {/* <ExploreContainer name="Youtube" /> */}
             </IonContent>
         </IonPage>
     );
