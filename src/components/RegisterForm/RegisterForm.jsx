@@ -22,7 +22,7 @@ function RegisterForm() {
 					setErrorMessage(response.error.message);
 				} else {
 					setUser(response.user.email);
-					history.push('/page/Register');
+					history.push('/page/Login');
 				}
 			})
 			.catch((err) => {
