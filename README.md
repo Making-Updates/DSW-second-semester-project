@@ -1,5 +1,14 @@
 # !fill in later - name
 
+## Contents
+
+- [Submission or project name](#submission-or-project-name)
+  - [Contents](#contents)
+  - [Group Members](#Group-Members)
+  - [Group Member Tasks](#Group-Member-Tasks)
+  - [How to install](#How-to-install)
+  - [Documentation](#Documentation)
+
 # dsw-semester2-project
 
 ---
