@@ -15,10 +15,6 @@ import {
 	IonButton,
 } from '@ionic/react';
 
-import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
-
-import InputGroup from 'react-bootstrap/InputGroup';
-
 function About() {
 	return (
 		<>
@@ -176,7 +172,7 @@ function About() {
 				</IonItem>
 
 				<IonItem>
-					<input type='checkbox' disabled />
+					<input type='checkbox' disabled checked />
 					<label className='form-check-label ms-2'>
 						Quiz leaderboard showing top scores
 					</label>

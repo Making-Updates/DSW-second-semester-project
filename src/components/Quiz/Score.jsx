@@ -44,7 +44,7 @@ function Score({ score, category, difficulty }) {
 			</div>
 			<div className='fixed-bottom d-flex justify-content-center'>
 				<button
-					className='col mx-2 my-3 btn btn-light btn-lg'
+					className='col mx-2 my-3 btn btn-light btn-lg border border-primary'
 					type='button'
 					onClick={showLeaderboard}
 				>

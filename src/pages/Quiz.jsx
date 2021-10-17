@@ -8,9 +8,8 @@ import {
 	IonToolbar,
 	useIonViewDidEnter,
 	useIonViewDidLeave,
-	useIonViewWillEnter,
 } from '@ionic/react';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import Quiz from '../components/Quiz/Quiz';
 import DifficultySelect from '../components/Quiz/DifficultySelect';
 import CategorySelect from '../components/Quiz/CategorySelect';
@@ -37,8 +36,6 @@ const Page = () => {
 	const [quizData, setQuizData] = useState(null);
 	const [error, setError] = useState(false);
 	const [errorMessage, setErrorMessage] = useState(null);
-	const [networkStatus, setNetworkStatus] = useState(false);
-	const [netStat, setNetStat] = useState(false);
 
 	const logCurrentNetworkStatus = async () => {
 		const status = await Network.getStatus();

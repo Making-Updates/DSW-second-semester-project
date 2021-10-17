@@ -20,6 +20,8 @@ const Page = () => {
 	const [difficulty, setDifficulty] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [tableData, setTableData] = useState([]);
+	const [error, setError] = useState(false);
+	const [errorMessage, setErrorMessage] = useState('');
 
 	useEffect(() => {
 		if (difficulty != null && category != null) {
@@ -28,10 +30,16 @@ const Page = () => {
 				const { data, error } = await supabase
 					.from(category + difficulty)
 					.select()
-					.order('score', { ascending: false });
+					.order('score', { ascending: false })
+					.order('created_at', { ascending: false });
 				console.log(data);
-				setTableData(data);
-				setIsLoading(false);
+				if (error) {
+					setError(true);
+					setErrorMessage(error);
+				} else {
+					setTableData(data);
+					setIsLoading(false);
+				}
 			}
 			select();
 		}
@@ -84,6 +92,10 @@ const Page = () => {
 					</div>
 				) : isLoading ? (
 					<LoadingIcon />
+				) : error ? (
+					<div className='mt-5 text-center align-middle display-4 text-danger'>
+						{errorMessage}
+					</div>
 				) : (
 					<Leaderboard data={tableData} />
 				)}

@@ -2,34 +2,77 @@ import { useState, useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 import { useHistory } from 'react-router-dom';
 import { supabase } from '../../supabase';
+import LoadingIcon from '../LoadingIcon/LoadingIcon';
+import { useIonViewDidEnter, useIonViewDidLeave } from '@ionic/react';
 
 function LoginForm() {
 	const history = useHistory();
 	const [user, setUser] = useContext(UserContext);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-
+	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState(false);
 	const [errorMessage, setErrorMessage] = useState('');
 
 	const submitController = (e) => {
 		e.preventDefault();
+		setIsLoading(true);
+		if (password === '' || email === '') {
+			setError(true);
+			setIsLoading(false);
+			setErrorMessage('Invalid Email or Password');
+			return;
+		}
 		supabase.auth
 			.signIn({ email, password })
 			.then((response) => {
 				if (response.error) {
 					setError(true);
+					setIsLoading(false);
 					setErrorMessage(response.error.message);
 				} else {
 					setUser(response.user.email);
-					history.push('/page/Mlh');
+					setIsLoading(false);
+					history.replace('/');
 				}
 			})
 			.catch((err) => {
 				setError(true);
-				setErrorMessage(err.response.text);
+				setIsLoading(false);
+				setErrorMessage(err);
 			});
 	};
+
+	function clearErrors() {
+		setError(false);
+		setErrorMessage('');
+	}
+
+	function resetStates() {
+		setEmail('');
+		setPassword('');
+	}
+
+	function updateEmail(e) {
+		console.log(e.target.value);
+		setEmail(e.target.value);
+		clearErrors();
+	}
+
+	function updatePassword(e) {
+		setPassword(e.target.value);
+		clearErrors();
+	}
+
+	useIonViewDidEnter(() => {
+		clearErrors();
+		resetStates();
+	});
+
+	useIonViewDidLeave(() => {
+		clearErrors();
+		resetStates();
+	});
 
 	return (
 		<>
@@ -39,37 +82,60 @@ function LoginForm() {
 				{error && <h2 className='text-danger'> {errorMessage}</h2>}
 			</div>
 
-			<form onSubmit={submitController}>
-				<div className='mx-5'>
-					<div className='form-inner mx-5 flex'>
-						<div className='form-group'>
-							<label htmlFor='email'>Email Address:</label>
-							<br />
-							<input
-								type='email'
-								name='email'
-								id='email'
-								onChange={(e) => setEmail(e.target.value)}
-								value={email}
-							/>
+			<div className='container-fluid'>
+				<div>
+					<div className='rounded d-flex justify-content-center'>
+						<div className='col-md-4 col-sm-12'>
+							<form onSubmit={submitController}>
+								<div className='p-4'>
+									<div className='input-group mb-3'>
+										<input
+											type='text'
+											className='form-control'
+											placeholder='Email'
+											onChange={updateEmail}
+											value={email}
+										/>
+									</div>
+									<div className='input-group mb-3'>
+										<input
+											type='password'
+											className='form-control'
+											placeholder='Password'
+											onChange={updatePassword}
+											value={password}
+										/>
+									</div>
+									<div className='d-flex justify-content-center'>
+										<button
+											className='btn btn-primary btn-lg me-3 w-75 border border-primary text-center mt-2'
+											type='submit'
+										>
+											Log In
+										</button>
+									</div>
+
+									<p className='fs-5 text-center mt-5'>
+										Don't have an account?
+										<button
+											type='button'
+											className='btn btn-link ps-2'
+											onClick={() => {
+												history.replace(
+													'/page/Register'
+												);
+											}}
+										>
+											Register
+										</button>
+									</p>
+								</div>
+							</form>
+							{isLoading && <LoadingIcon />}
 						</div>
-						<br />
-						<div className='form-group'>
-							<label htmlFor='password'>Password:</label>
-							<br />
-							<input
-								type='password'
-								name='password'
-								id='password'
-								onChange={(e) => setPassword(e.target.value)}
-								value={password}
-							/>
-						</div>
-						<br />
-						<input type='submit' value='Login' />
 					</div>
 				</div>
-			</form>
+			</div>
 		</>
 	);
 }

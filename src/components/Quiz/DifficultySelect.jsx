@@ -18,7 +18,7 @@ function DifficultySelect() {
 				<div className='row text-center'>
 					<button
 						type='button'
-						className='col mx-2 my-3 p-2 btn btn-light btn-lg'
+						className='col mx-2 my-3 p-2 btn btn-light btn-lg border border-primary'
 						value='easy'
 						onClick={changeDifficulty}
 					>
@@ -27,7 +27,7 @@ function DifficultySelect() {
 					<div className='w-100'></div>
 					<button
 						type='button'
-						className='col mx-2 my-3 p-2 btn btn-light btn-lg'
+						className='col mx-2 my-3 p-2 btn btn-light btn-lg border border-primary'
 						value='medium'
 						onClick={changeDifficulty}
 					>
@@ -36,7 +36,7 @@ function DifficultySelect() {
 					<div className='w-100'></div>
 					<button
 						type='button'
-						className='col mx-2 my-3 p-2 btn btn-light btn-lg'
+						className='col mx-2 my-3 p-2 btn btn-light btn-lg border border-primary'
 						value='hard'
 						onClick={changeDifficulty}
 					>

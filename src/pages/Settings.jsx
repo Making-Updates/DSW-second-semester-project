@@ -6,39 +6,28 @@ import {
 	IonPage,
 	IonTitle,
 	IonToolbar,
-	IonListHeader,
-	IonNote,
 } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 
-// delete
 import { useHistory } from 'react-router-dom';
 import { supabase } from '../supabase';
 import { UserContext } from '../context/UserContext';
 import { useContext } from 'react';
-// delete
 
 const Page = () => {
 	const [user, setUser] = useContext(UserContext);
 	const history = useHistory();
-	function login() {
-		history.push('/page/Login');
-	}
-	function register() {
-		history.push('/page/Register');
-	}
+
 	function logout() {
 		supabase.auth
 			.signOut()
 			.then((response) => {
 				setUser('Not Logged In');
-				history.push('/page/Login');
+				history.replace('/page/Login');
 			})
 			.catch((err) => {
-				alert(err.response.text);
+				alert(err);
 			});
 	}
-	// delete
 
 	return (
 		<IonPage>
@@ -60,14 +49,14 @@ const Page = () => {
 
 				<hr />
 				<div className='d-flex justify-content-center my-5'>
-					<button className='btn btn-light btn-lg me-3 w-50'>
+					<button className='btn btn-light btn-lg me-3 w-50 border border-primary'>
 						Lock the app
 					</button>
 				</div>
 				<hr />
 				<div className='d-flex justify-content-center my-5'>
 					<button
-						className='btn btn-light btn-lg me-3 w-50'
+						className='btn btn-light btn-lg me-3 w-50 border border-primary'
 						onClick={() => {
 							history.push('/page/Update');
 						}}
@@ -78,7 +67,7 @@ const Page = () => {
 				<hr />
 				<div className='d-flex justify-content-center my-5'>
 					<button
-						className='btn btn-light btn-lg me-3 w-50'
+						className='btn btn-light btn-lg me-3 w-50 border border-primary'
 						onClick={() => {
 							history.push('/page/About');
 						}}
@@ -89,17 +78,13 @@ const Page = () => {
 				<hr />
 				<div className='d-flex justify-content-center my-5'>
 					<button
-						className='btn btn-light btn-lg me-3 w-50'
+						className='btn btn-light btn-lg me-3 w-50 border border-danger'
 						onClick={logout}
 					>
 						Sign Out
 					</button>
 				</div>
 				<hr />
-				{/* delete */}
-				<button onClick={login}>login</button>
-				<button onClick={register}>register</button>
-				{/* delete */}
 			</IonContent>
 		</IonPage>
 	);
