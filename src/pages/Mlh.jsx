@@ -1,49 +1,59 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonCard, IonItem } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import {
+	IonButtons,
+	IonContent,
+	IonHeader,
+	IonMenuButton,
+	IonPage,
+	IonTitle,
+	IonToolbar,
+} from '@ionic/react';
 import MLH from '../components/Mlh/MLH';
 
+import { fetchMlhData } from '../api';
+import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
+import { useState, useEffect } from 'react';
+
 const Page = () => {
+	const [eventData, setEventData] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+	useEffect(() => {
+		setIsLoading(true);
+		const fetchMyAPI = async () => {
+			const initialMlhData = await fetchMlhData();
+			setEventData(initialMlhData.data.currentEvents);
+			setIsLoading(false);
+		};
 
-    return (
-        <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonButtons slot="start">
-                        <IonMenuButton />
-                    </IonButtons>
-                    <IonTitle>MLH</IonTitle>
-                </IonToolbar>
-            </IonHeader>
+		fetchMyAPI();
+	}, []);
 
-            <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">MLH</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                {/* Insert components under here */}
-                {/* <IonCard>
-                    <IonItem>
-                        <img src="" alt="img"></img>
-                    </IonItem>
-                    <IonItem>
-                        <p>Hackrithmetic</p>
-                    </IonItem>
-                    <IonItem>
-                        <h2>date</h2>
-                    </IonItem>
-                    <IonItem>
-                        <p>location</p>
-                    </IonItem>
-                    <IonItem>
-                        <p>Digital Only</p>
-                    </IonItem>
-                </IonCard> */}
-                {/* <ExploreContainer name="MLH" /> */}
-                <MLH />
-            </IonContent>
-        </IonPage>
-    );
+	return (
+		<IonPage>
+			<IonHeader>
+				<IonToolbar>
+					<IonButtons slot='start'>
+						<IonMenuButton />
+					</IonButtons>
+					<IonTitle>MLH</IonTitle>
+				</IonToolbar>
+			</IonHeader>
+
+			<IonContent fullscreen>
+				<IonHeader collapse='condense'>
+					<IonToolbar>
+						<IonTitle size='large'>MLH</IonTitle>
+					</IonToolbar>
+				</IonHeader>
+				{isLoading ? (
+					<LoadingIcon />
+				) : (
+					eventData.map((element, index) => (
+						<MLH data={element} itemNo={index} />
+					))
+				)}
+			</IonContent>
+		</IonPage>
+	);
 };
 
 export default Page;

@@ -1,51 +1,52 @@
 .hackathonWrapper {
-    cursor: pointer;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 300px;
-    min-height: 360px;
-    margin-bottom: 2rem;
+	cursor: pointer;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 300px;
+	min-height: 360px;
+	margin-bottom: 2rem;
 }
 .mlhCard {
-    border: 1px solid #c8cac9;
-    border-radius: 3px;
-    background-clip: padding-box;
-    background-color: #fff;
-    background-position: center;
-    padding-bottom: 20px;
-    text-align: center;
-    position: relative;
+	border: 1px solid #c8cac9;
+	border-radius: 3px;
+	background-clip: padding-box;
+	background-color: rgba(13, 71, 161, 0.7);
+	opacity: 50;
+	background-position: center;
+	padding-bottom: 20px;
+	text-align: center;
+	position: relative;
 }
 .image-wrap {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    height: 215px;
-    overflow: hidden;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	height: 215px;
+	overflow: hidden;
 }
 .logo {
-    border-radius: 3px;
-    background-clip: padding-box;
-    background-color: #fff;
-    height: 60px;
-    left: 50%;
-    margin-top: -46px;
-    margin-left: -30px;
-    position: absolute;
-    text-align: center;
-    width: 60px;
+	border-radius: 3px;
+	background-clip: padding-box;
+	background-color: #fff;
+	height: 60px;
+	left: 50%;
+	margin-top: -46px;
+	margin-left: -30px;
+	position: absolute;
+	text-align: center;
+	width: 60px;
 }
 .hackathonName {
-    font-size: 1.6rem;
-    line-height: 2rem;
-    margin: 4rem auto .5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding-right: 1rem;
-    padding-left: 1rem;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	margin: 4rem auto 0.5rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-right: 1rem;
+	padding-left: 1rem;
 }
 .hackathonDate {
-    color: #989898;
-    text-transform: uppercase;
+	color: #989898;
+	text-transform: uppercase;
 }

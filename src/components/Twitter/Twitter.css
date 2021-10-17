@@ -1,41 +1,41 @@
 .tweet {
-  display: flex;
-  align-items: flex-start;
-  border-bottom: 1px solid var(--twitter-background);
-  padding-bottom: 10px;
-  border: 1px solid grey;
+	display: flex;
+	align-items: flex-start;
+	border-bottom: 1px solid var(--twitter-background);
+	padding-bottom: 10px;
+	border: 1px solid grey;
 }
 
 .tweetContent {
-  flex: 1;
-  padding: 10px;
+	flex: 1;
+	padding: 10px;
 }
 
 .tweetContent > img {
-  border-radius: 20px;
+	border-radius: 20px;
 }
 
 .tweetHeaderDescription {
-  /* margin-bottom: 5px; */
-  font-size: 15px;
+	/* margin-bottom: 5px; */
+	font-size: 15px;
 }
 
 .tweetHeaderText > h3 {
-  font-size: 15px;
-  margin-bottom: 5px;
+	font-size: 15px;
+	margin-bottom: 5px;
 }
 
 .verificationStatus {
-  font-size: 14px !important;
-  color: var(--twitter-color);
+	font-size: 14px !important;
+	color: var(--twitter-color);
 }
 
 .tweetHeaderSpecial {
-  font-weight: 600;
-  font-size: 12px;
-  color: gray;
+	font-weight: 600;
+	font-size: 12px;
+	color: gray;
 }
 
 .tweetAvatar {
-  padding: 20px;
+	padding: 20px;
 }
