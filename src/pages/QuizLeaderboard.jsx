@@ -62,7 +62,6 @@ const Page = () => {
 						<IonTitle size='large'>Quiz leaderboard</IonTitle>
 					</IonToolbar>
 				</IonHeader>
-
 				<IonSegment onIonChange={(e) => setCategory(e.detail.value)}>
 					<IonSegmentButton value='php'>
 						<IonLabel>PHP</IonLabel>
@@ -85,7 +84,6 @@ const Page = () => {
 						<IonLabel>Hard</IonLabel>
 					</IonSegmentButton>
 				</IonSegment>
-
 				{category === null || difficulty === null ? (
 					<div className='mt-5 text-center align-middle display-4'>
 						Choose A Category and Difficulty

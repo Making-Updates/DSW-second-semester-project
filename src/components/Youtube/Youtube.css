@@ -1,0 +1,40 @@
+.youtubecard {
+    width: 290px;
+    margin-bottom: 40px;
+    margin: auto;
+    padding: 5%;
+}
+
+.youtubeCardImg {
+    height: 140px;
+    width: 250px;
+}
+
+.youtubeCardDetails {
+    display: flex;
+    margin-top: 10px;
+    padding-right: 30px;
+}
+
+.videoText {
+    margin-left: 15px;
+}
+
+.videoText > h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.videoText > p {
+    font-size: 14px;
+    color: gray;
+}
+
+.videoImg {
+    height: 30px !important;
+    width: 30px !important;
+}
+
+.videoText > * {
+    margin: 1px;
+}
