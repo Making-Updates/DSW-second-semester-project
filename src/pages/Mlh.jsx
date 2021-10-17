@@ -1,5 +1,6 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonCard, IonItem } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import MLH from '../components/Mlh/MLH';
 
 const Page = () => {
 
@@ -21,7 +22,25 @@ const Page = () => {
                     </IonToolbar>
                 </IonHeader>
                 {/* Insert components under here */}
-                <ExploreContainer name="MLH" />
+                {/* <IonCard>
+                    <IonItem>
+                        <img src="" alt="img"></img>
+                    </IonItem>
+                    <IonItem>
+                        <p>Hackrithmetic</p>
+                    </IonItem>
+                    <IonItem>
+                        <h2>date</h2>
+                    </IonItem>
+                    <IonItem>
+                        <p>location</p>
+                    </IonItem>
+                    <IonItem>
+                        <p>Digital Only</p>
+                    </IonItem>
+                </IonCard> */}
+                {/* <ExploreContainer name="MLH" /> */}
+                <MLH />
             </IonContent>
         </IonPage>
     );
