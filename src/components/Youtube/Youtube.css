@@ -1,20 +1,24 @@
 .youtubecard {
-    width: 290px;
+    width: 100%;
     margin-bottom: 40px;
     margin: auto;
     padding: 5%;
     border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .youtubeCardImg {
-    height: 200px;
-    width: 250px;
+    height: 250px;
+    width: 440px;
 }
 
 .youtubeCardDetails {
     display: flex;
     margin-top: 10px;
     padding-right: 30px;
+    width: 440px;
 }
 
 .videoText {
