@@ -172,13 +172,13 @@ On the Settings Page users will be able to sign out and lock the app with their 
 
 ## Application Requirements
 
--   [ ] Side bar with all the pages
--   [ ] MLH page with latest Hackathons
--   [ ] Twitter page with latest tweets
--   [ ] Youtube page with latest videos
--   [ ] Quiz page allowing user to take a quiz
--   [ ] Quiz Leaderboard page with top scores
--   [ ] Settings page with signout button
+-   [x] Side bar with all the pages
+-   [x] MLH page with latest Hackathons
+-   [x] Twitter page with latest tweets
+-   [x] Youtube page with latest videos
+-   [x] Quiz page allowing user to take a quiz
+-   [x] Quiz Leaderboard page with top scores
+-   [x] Settings page with signout button
 -   [ ] Settings page with setting to lock the app with your fingerprint
 
 ## Problem Statement
