@@ -77,7 +77,35 @@ temp:
 
 ## Narratives
 
-!fill in later
+<b> How someone uses our app </b>
+A user registers an account on our app to access tutorials, hackathons, software development news and compete with other programmers by taking quizzes. There is a leaderboard where the players can see their ranking.
+
+On the FreeCodeCamp YouTube page:
+1. A user is presented with the latest tutorials from freeCodeCamp.org Youtube channel
+2. They click on a video that interests them the most. 
+3.They are then redirected to youtube where they learn the technology. 
+
+On the FreeCodeCamp Twitter page:
+1. A user is presented with the latest news from freeCodeCamp.org Twitter page.
+2. They click on a tweet that interests them the most.
+3. They are then redirected to the freeCodeCamp.org blog in the browser.
+4. Through those blog posts they keep themselves knowledgeable about the IT world.
+
+On the MLH Hackathons page:
+1. A user is presented with the latest Hackathon events from MLH.io website
+2. They click on a event that interests them the most.
+3. They are then redirected to a page in the browser where they read more about the event and register to participate.
+4. They stand a chance to network with other tech enthusiasts and win prizes.
+
+On the Quiz page:
+1. You are presented with three(3) categories to choose from.
+2. You choose the subject and the difficulty level.
+3. Take the quiz.
+4. When you are done you have the option to view your ranking on the leaderboard.
+
+<b>Why our mobile app is necessary to achieve certain goals</b>
+
+Tech enthusiasts use our app to easily find toturials that will teach them how to complete programming tasks, access information easily and cut down on the time that they would rather be spending hopping from one source to another.
 
 ## Explanation of our Database and UML Diagram
 
