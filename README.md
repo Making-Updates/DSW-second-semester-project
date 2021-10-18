@@ -77,7 +77,8 @@ temp:
 
 ## Narratives
 
-<b> How someone uses our app </b>
+<b> How users uses our app </b>
+
 A user registers an account on our app to access tutorials, hackathons, software development news and compete with other programmers by taking quizzes. There is a leaderboard where the players can see their ranking.
 
 On the FreeCodeCamp YouTube page:
