@@ -17,6 +17,7 @@
 	padding-bottom: 20px;
 	text-align: center;
 	position: relative;
+	color: #fff;
 }
 .image-wrap {
 	border-top-left-radius: 3px;
@@ -47,6 +48,6 @@
 	padding-left: 1rem;
 }
 .hackathonDate {
-	color: #989898;
+	color: #000;
 	text-transform: uppercase;
 }
