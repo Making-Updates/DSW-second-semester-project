@@ -142,15 +142,15 @@ On the Settings Page users will be able to sign out and lock the app with their 
 
 ## Problem Statement
 
-!fill in later
+People with an intetest for software development often don't know where to start looking for tutorials, quizzes to evaluate their knowledge of programming, latest news on software development and hackathons to participate in. 
 
 ## Problem Objective
 
-!fill in later
+Our app is one that solves the problem of simplifying ones life in terms of accessing information about the programming world by consolidating information into one app.
 
 ## Proposed Solution
 
-!fill in later
+We have developed a mobile application where users can view the latest hackathons taking place, view the latest news published by freecodecamp.org, find the latest tutorials taught by professional developers and take quizzes to improve their knowledge.
 
 ## Solution Design
 
