@@ -69,11 +69,23 @@ temp:
 
 ## Tools used to build your application
 
-!fill in later
+- React
+- React Bootstrap
+- Ionic
+- Capacitor
+- Capacitor Network
+- Supabase
+- Axios
 
 ## Explanation of how these tools are integrated
 
-!fill in later
+- React is used to build our User Interface
+- React Bootstrap is used to style our User Interface
+- Ionic is used to create a cross-platform application for Android and the Web
+- Capacitor is used by Ionic as the runtime
+- Capacitor Network is used check for network changes
+- Supabase is our database provider
+- Axios is used to make http requests to our backend API
 
 ## Narratives
 
