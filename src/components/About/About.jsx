@@ -1,18 +1,9 @@
 import {
-	IonContent,
-	IonHeader,
-	IonPage,
-	IonTitle,
-	IonToolbar,
 	IonCard,
 	IonCardHeader,
-	IonCardSubtitle,
 	IonCardTitle,
-	IonCardContent,
 	IonItem,
-	IonIcon,
 	IonLabel,
-	IonButton,
 } from '@ionic/react';
 
 function About() {
@@ -20,7 +11,7 @@ function About() {
 		<>
 			<IonCard>
 				<IonCardHeader>
-					<IonCardTitle>**App Name**</IonCardTitle>
+					<IonCardTitle>Dev Central</IonCardTitle>
 				</IonCardHeader>
 			</IonCard>
 
@@ -61,6 +52,7 @@ function About() {
 						Tiiso Senosha <br />
 						<ul>
 							<li>Quiz Leaderboard</li>
+							<li>Styling</li>
 						</ul>
 					</IonLabel>
 				</IonItem>
@@ -68,6 +60,10 @@ function About() {
 				<IonItem>
 					<IonLabel>
 						Lesego Temane <br />
+						<ul>
+							<li>MLH Cards</li>
+							<li>Styling</li>
+						</ul>
 					</IonLabel>
 				</IonItem>
 
@@ -85,17 +81,31 @@ function About() {
 				<IonItem>
 					<IonLabel>
 						Alexis Makgeru <br />
+						<ul>
+							<li>Twitter Cards</li>
+							<li>Styling</li>
+						</ul>
 					</IonLabel>
 				</IonItem>
 
 				<IonItem>
 					<IonLabel>
 						Bonginkosi Nhantumbo <br />
+						<ul>
+							<li>Login Page</li>
+							<li>Register Page</li>
+							<li>Update Password Page</li>
+							<li>Styling</li>
+						</ul>
 					</IonLabel>
 				</IonItem>
 				<IonItem>
 					<IonLabel>
 						Blessing Leso <br />
+						<ul>
+							<li>YouTube Cards</li>
+							<li>Styling</li>
+						</ul>
 					</IonLabel>
 				</IonItem>
 			</IonCard>
@@ -144,21 +154,21 @@ function About() {
 					</label>
 				</IonItem>
 				<IonItem>
-					<input type='checkbox' disabled />
+					<input type='checkbox' disabled checked />
 					<label className='form-check-label ms-2'>
 						MLH page with latest Hackathons
 					</label>
 				</IonItem>
 
 				<IonItem>
-					<input type='checkbox' disabled />
+					<input type='checkbox' disabled checked />
 					<label className='form-check-label ms-2'>
 						Twitter page with latest tweets
 					</label>
 				</IonItem>
 
 				<IonItem>
-					<input type='checkbox' disabled />
+					<input type='checkbox' disabled checked />
 					<label className='form-check-label ms-2'>
 						Youtube page with latest videos
 					</label>

@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package za.makingupdates.thewinningteam;
 
 import com.getcapacitor.BridgeActivity;
 

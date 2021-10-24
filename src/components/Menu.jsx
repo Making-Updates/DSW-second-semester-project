@@ -9,7 +9,6 @@ import {
 	IonMenuToggle,
 	IonNote,
 } from '@ionic/react';
-
 import { useLocation } from 'react-router-dom';
 import {
 	logoTwitter,
@@ -20,8 +19,7 @@ import {
 	settingsOutline,
 } from 'ionicons/icons';
 import './Menu.css';
-import { useContext } from 'react';
-import { UserContext } from '../context/UserContext';
+import { useAuth } from '../context/AuthContext';
 
 const appPages = [
 	{
@@ -64,13 +62,13 @@ const appPages = [
 
 const Menu = () => {
 	const location = useLocation();
-	const [user, setUser] = useContext(UserContext);
+	const { user } = useAuth();
 	return (
 		<IonMenu contentId='main' type='overlay'>
 			<IonContent>
 				<IonList id='page-list'>
-					<IonListHeader>DSW Semester 2 Project</IonListHeader>
-					<IonNote>{user}</IonNote>
+					<IonListHeader>Dev Central</IonListHeader>
+					<IonNote>{user ? user : 'Not Logged In'}</IonNote>
 					<hr />
 					{appPages.map((appPage, index) => {
 						return (

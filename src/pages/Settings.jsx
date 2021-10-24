@@ -7,22 +7,19 @@ import {
 	IonTitle,
 	IonToolbar,
 } from '@ionic/react';
-
 import { useHistory } from 'react-router-dom';
 import { supabase } from '../supabase';
-import { UserContext } from '../context/UserContext';
-import { useContext } from 'react';
+import { useNetwork } from '../context/NetworkContext';
 
 const Page = () => {
-	const [user, setUser] = useContext(UserContext);
 	const history = useHistory();
+	const { networkStatus } = useNetwork();
 
 	function logout() {
 		supabase.auth
 			.signOut()
 			.then((response) => {
-				setUser('Not Logged In');
-				history.replace('/page/Login');
+				history.push('/page/Login');
 			})
 			.catch((err) => {
 				alert(err);
@@ -46,7 +43,12 @@ const Page = () => {
 						<IonTitle size='large'>Settings</IonTitle>
 					</IonToolbar>
 				</IonHeader>
-
+				{!networkStatus && (
+					<div className='alert alert-warning m-3' role='alert'>
+						You are currently offline, some functions will be
+						unavailable.
+					</div>
+				)}
 				<hr />
 				<div className='d-flex justify-content-center my-5'>
 					<button className='btn btn-light btn-lg me-3 w-50 border border-primary'>
@@ -60,6 +62,7 @@ const Page = () => {
 						onClick={() => {
 							history.push('/page/Update');
 						}}
+						disabled={!networkStatus}
 					>
 						Update Password
 					</button>
@@ -80,6 +83,7 @@ const Page = () => {
 					<button
 						className='btn btn-light btn-lg me-3 w-50 border border-danger'
 						onClick={logout}
+						disabled={!networkStatus}
 					>
 						Sign Out
 					</button>

@@ -14,6 +14,7 @@ import {
 import { supabase } from '../supabase';
 import Leaderboard from '../components/Leaderboard/Leaderboard';
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
+import { useNetwork } from '../context/NetworkContext';
 
 const Page = () => {
 	const [category, setCategory] = useState(null);
@@ -23,27 +24,46 @@ const Page = () => {
 	const [error, setError] = useState(false);
 	const [errorMessage, setErrorMessage] = useState('');
 
+	const { networkStatus } = useNetwork();
+
+	async function select() {
+		const { data, error } = await supabase
+			.from(category + difficulty)
+			.select()
+			.order('score', { ascending: false })
+			.order('created_at', { ascending: false });
+		console.log(data);
+		if (error) {
+			setError(true);
+			setErrorMessage(error);
+		} else {
+			setTableData(data);
+			setIsLoading(false);
+		}
+	}
+
 	useEffect(() => {
+		if (!networkStatus) {
+			setIsLoading(false);
+			return;
+		}
 		if (difficulty != null && category != null) {
 			setIsLoading(true);
-			async function select() {
-				const { data, error } = await supabase
-					.from(category + difficulty)
-					.select()
-					.order('score', { ascending: false })
-					.order('created_at', { ascending: false });
-				console.log(data);
-				if (error) {
-					setError(true);
-					setErrorMessage(error);
-				} else {
-					setTableData(data);
-					setIsLoading(false);
-				}
-			}
 			select();
 		}
 	}, [category, difficulty]);
+
+	// Run everytime the network status changes
+	useEffect(() => {
+		if (networkStatus) {
+			if (difficulty != null && category != null) {
+				setIsLoading(true);
+				select();
+			}
+		} else {
+			setIsLoading(false);
+		}
+	}, [networkStatus]);
 
 	return (
 		<IonPage>
@@ -84,7 +104,12 @@ const Page = () => {
 						<IonLabel>Hard</IonLabel>
 					</IonSegmentButton>
 				</IonSegment>
-				{category === null || difficulty === null ? (
+				{!networkStatus ? (
+					<div className='alert alert-warning m-3' role='alert'>
+						You are currently offline. Please try again once you
+						have a network connection.
+					</div>
+				) : category === null || difficulty === null ? (
 					<div className='mt-5 text-center align-middle display-4'>
 						Choose A Category and Difficulty
 					</div>

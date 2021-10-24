@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">second-semester-project</string>
-    <string name="title_activity_main">second-semester-project</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">Dev Central</string>
+    <string name="title_activity_main">Dev Central</string>
+    <string name="package_name">za.makingupdates.thewinningteam</string>
+    <string name="custom_url_scheme">za.makingupdates.thewinningteam</string>
 </resources>

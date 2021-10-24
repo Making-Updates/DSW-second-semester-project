@@ -1,13 +1,13 @@
-import { useState, useContext } from 'react';
-import { UserContext } from '../../context/UserContext';
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { supabase } from '../../supabase';
 import LoadingIcon from '../LoadingIcon/LoadingIcon';
 import { useIonViewDidEnter, useIonViewDidLeave } from '@ionic/react';
+import { useAuth } from '../../context/AuthContext';
 
 function UpdatePasswordForm() {
 	const history = useHistory();
-	const [user, setUser] = useContext(UserContext);
+	const { user } = useAuth();
 	const [password, setPassword] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState(false);
@@ -33,7 +33,6 @@ function UpdatePasswordForm() {
 					supabase.auth
 						.signOut()
 						.then((response) => {
-							setUser('Not Logged In');
 							setIsLoading(false);
 							history.push('/page/Login');
 						})

@@ -1,5 +1,4 @@
 import { useState, useContext } from 'react';
-import { UserContext } from '../../context/UserContext';
 import { useHistory } from 'react-router-dom';
 import { supabase } from '../../supabase';
 import LoadingIcon from '../LoadingIcon/LoadingIcon';
@@ -7,7 +6,6 @@ import { useIonViewDidEnter, useIonViewDidLeave } from '@ionic/react';
 
 function LoginForm() {
 	const history = useHistory();
-	const [user, setUser] = useContext(UserContext);
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
@@ -31,9 +29,8 @@ function LoginForm() {
 					setIsLoading(false);
 					setErrorMessage(response.error.message);
 				} else {
-					setUser(response.user.email);
 					setIsLoading(false);
-					history.replace('/');
+					history.push('/page/Mlh');
 				}
 			})
 			.catch((err) => {
@@ -121,9 +118,7 @@ function LoginForm() {
 											type='button'
 											className='btn btn-link ps-2'
 											onClick={() => {
-												history.replace(
-													'/page/Register'
-												);
+												history.push('/page/Register');
 											}}
 										>
 											Register

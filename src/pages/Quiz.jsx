@@ -24,7 +24,7 @@ import {
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
 import { fetchQuizData } from '../api';
 import Score from '../components/Quiz/Score';
-import { Network } from '@capacitor/network';
+import { useNetwork } from '../context/NetworkContext';
 
 const Page = () => {
 	const [page, setPage] = useState(null);
@@ -37,16 +37,7 @@ const Page = () => {
 	const [error, setError] = useState(false);
 	const [errorMessage, setErrorMessage] = useState(null);
 
-	const logCurrentNetworkStatus = async () => {
-		const status = await Network.getStatus();
-		if (status.connected === true) {
-			setPage('category');
-		} else if (status.connected === false) {
-			setPage('offline');
-		}
-
-		setIsLoading(false);
-	};
+	const { networkStatus } = useNetwork();
 
 	function setDefaultOptions() {
 		setCategory(null);
@@ -60,8 +51,6 @@ const Page = () => {
 
 	useIonViewDidEnter(() => {
 		setDefaultOptions();
-		setIsLoading(true);
-		logCurrentNetworkStatus();
 	});
 
 	useIonViewDidLeave(() => {
@@ -119,14 +108,17 @@ const Page = () => {
 		}
 	}, [showScore]);
 
-	Network.addListener('networkStatusChange', (status) => {
-		if (status.connected === true) {
-			setDefaultOptions();
-			setPage('category');
-		} else if (status.connected === false) {
-			setPage('offline');
-		}
-	});
+	useEffect(() => {
+		setIsLoading(true);
+		networkStatus ? setPage('category') : setPage('offline');
+		setIsLoading(false);
+	}, []);
+
+	useEffect(() => {
+		setIsLoading(true);
+		networkStatus ? setPage('category') : setPage('offline');
+		setIsLoading(false);
+	}, [networkStatus]);
 
 	return (
 		<QuizCategoryContext.Provider value={[category, setCategory]}>

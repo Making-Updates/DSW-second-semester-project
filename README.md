@@ -2,25 +2,26 @@
 
 ## Contents
 
-- [Submission or project name](#submission-or-project-name)
+- [Dev Central](#dev-central)
   - [Contents](#contents)
-  - [Group Members](#Group-Members)
-  - [Group Member Tasks](#Group-Member-Tasks)
-  - [How to install](#How-to-install)
-  - [Documentation](#Documentation)
-    - [Tools used to build your application](#Tools-used-to-build-your-application)
-    - [Explanation of how these tools are integrated](#Explanation-of-how-these-tools-are-integrated)
-    - [Narratives](#Narratives)
-    - [Explanation of our Database and UML Diagram](#Explanation-of-our-Database-and-UML-Diagram)
-    - [Screen dumps of the application](#Screen-dumps-of-the-application)
-    - [Mockups](#Mockups)
-    - [Screen Flows](#Screen-Flows)
-    - [Use Cases](#Use-cases)
-    - [Application Requirements](#Application-Requirements)
-    - [Problem Statement](#Problem-Statement)
-    - [Problem Objective](#Problem-Objective)
-    - [Proposed Solution](#Proposed-Solution)
-    - [Solution Design](#Solution-Design)
+- [dsw-semester2-project](#dsw-semester2-project)
+- [Group Members](#group-members)
+- [Group Member Tasks](#group-member-tasks)
+- [How to install](#how-to-install)
+- [Documentation](#documentation)
+  - [Tools used to build your application](#tools-used-to-build-your-application)
+  - [Explanation of how these tools are integrated](#explanation-of-how-these-tools-are-integrated)
+  - [Narratives](#narratives)
+  - [Explanation of our Database and UML Diagram](#explanation-of-our-database-and-uml-diagram)
+  - [Screen dumps of the application](#screen-dumps-of-the-application)
+  - [Mockups](#mockups)
+  - [Screen Flows](#screen-flows)
+  - [Use Cases](#use-cases)
+  - [Application Requirements](#application-requirements)
+  - [Problem Statement](#problem-statement)
+  - [Problem Objective](#problem-objective)
+  - [Proposed Solution](#proposed-solution)
+  - [Solution Design](#solution-design)
 
 # dsw-semester2-project
 
@@ -42,50 +43,72 @@ Blessing Leso - 219089394 - blessingitlotlengleso@gmail.com
 
 # Group Member Tasks
 
-Tiiso Senosha -
+Tiiso Senosha - Quiz Leaderboard, Styling
 
-Lesego Temane -
+Lesego Temane - MLH Cards, Styling
 
-Waaiez Kinnear -
+Waaiez Kinnear - Quiz, Settings, Database Setup
 
-Alexis Makgeru -
+Alexis Makgeru - Twitter Cards, Styling
 
-Bonginkosi Nhantumbo -
+Bonginkosi Nhantumbo - Login Page, Register Page, Update Password Page, Styling
 
-Blessing Leso -
+Blessing Leso - YouTube Cards, Styling
 
 # How to install
 
-!fill in later
+First you need NodeJS and the Ionic CLI installed.
+Android Studio and/or xCode will also need to be installed in order to build the mobile application counterparts.
 
-temp:
+Once installed and working you can clone this repo with the following command
+`git clone https://github.com/Making-Updates/DSW-second-semester-project.git`
 
--   Run `ionic serve` within the app directory to see your app in the browser
--   Run `ionic capacitor add` to add a native iOS or Android project using Capacitor
--   Generate your app icon and splash screens using `cordova-res --skip-config --copy`
--   Explore the Ionic docs for components, tutorials, and more: https://ion.link/docs
+After the repo has been cloned you need to open a terminal window (Powershell) inside the folder and run the following command
+`npm install`
+
+This will install all the required dependencies.
+
+After the dependencies are installed you are ready to start the application.
+
+Run the following command to start the application
+`ionic serve`
+
+Look in your terminal output and you will see the line
+`Listening on Port XXXX`
+Where `XXXX` is a number.
+
+Once you have the Port number you can navigate to
+`localhost:XXXX/`
+
+In order to build the application for a specific platform you need to run one of the following commands:
+`ionic capacitor add android` or `ionic capacitor add ios`
+
+The above command will create the initial files needed to build an app for the specific platform. Run the following command to ensure that your project files are synced for the platform you want to build for:
+`ionic capacitor copy android` or `ionic capacitor copy ios`
+
+After the files have sync you can open either Android Stuido or xCode to build the application.
 
 # Documentation
 
 ## Tools used to build your application
 
-- React
-- React Bootstrap
-- Ionic
-- Capacitor
-- Capacitor Network
-- Supabase
-- Axios
+-   React
+-   React Bootstrap
+-   Ionic
+-   Capacitor
+-   Capacitor Network
+-   Supabase
+-   Axios
 
 ## Explanation of how these tools are integrated
 
-- React is used to build our User Interface
-- React Bootstrap is used to style our User Interface
-- Ionic is used to create a cross-platform application for Android and the Web
-- Capacitor is used by Ionic as the runtime
-- Capacitor Network is used check for network changes
-- Supabase is our database provider
-- Axios is used to make http requests to our backend API
+-   React is used to build our User Interface
+-   React Bootstrap is used to style our User Interface
+-   Ionic is used to create a cross-platform application for Android and the Web
+-   Capacitor is used by Ionic as the runtime
+-   Capacitor Network is used check for network changes
+-   Supabase is our database provider
+-   Axios is used to make http requests to our backend API
 
 ## Narratives
 
@@ -94,23 +117,27 @@ temp:
 A user registers an account on our app to access tutorials, hackathons, software development news and compete with other programmers by taking quizzes. There is a leaderboard where the players can see their ranking.
 
 On the FreeCodeCamp YouTube page:
+
 1. A user is presented with the latest tutorials from freeCodeCamp.org Youtube channel
-2. They click on a video that interests them the most. 
-3.They are then redirected to youtube where they learn the technology. 
+2. They click on a video that interests them the most.
+   3.They are then redirected to youtube where they learn the technology.
 
 On the FreeCodeCamp Twitter page:
+
 1. A user is presented with the latest news from freeCodeCamp.org Twitter page.
 2. They click on a tweet that interests them the most.
 3. They are then redirected to the freeCodeCamp.org blog in the browser.
 4. Through those blog posts they keep themselves knowledgeable about the IT world.
 
 On the MLH Hackathons page:
+
 1. A user is presented with the latest Hackathon events from MLH.io website
 2. They click on a event that interests them the most.
 3. They are then redirected to a page in the browser where they read more about the event and register to participate.
 4. They stand a chance to network with other tech enthusiasts and win prizes.
 
 On the Quiz page:
+
 1. You are presented with three(3) categories to choose from.
 2. You choose the subject and the difficulty level.
 3. Take the quiz.
@@ -183,7 +210,7 @@ On the Settings Page users will be able to sign out and lock the app with their 
 
 ## Problem Statement
 
-People with an intetest for software development often don't know where to start looking for tutorials, quizzes to evaluate their knowledge of programming, latest news on software development and hackathons to participate in. 
+People with an intetest for software development often don't know where to start looking for tutorials, quizzes to evaluate their knowledge of programming, latest news on software development and hackathons to participate in.
 
 ## Problem Objective
 

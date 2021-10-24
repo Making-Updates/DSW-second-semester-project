@@ -1,7 +1,7 @@
 {
-  "name": "second-semester-project",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
+	"name": "Dev Central",
+	"integrations": {
+		"capacitor": {}
+	},
+	"type": "react"
 }

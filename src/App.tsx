@@ -24,23 +24,27 @@ import './theme/variables.css';
 /* Bootstrap CSS */
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { UserContext } from './context/UserContext';
-import { useState } from 'react';
 import Router from './Router';
+import { AuthProvider } from './context/AuthContext';
+import { StorageProvider } from './context/StorageContext';
+import { NetworkProvider } from './context/NetworkContext';
 
 const App = () => {
-	const [user, setUser] = useState<any | null>('Not Logged In');
 	return (
-		<UserContext.Provider value={[user, setUser]}>
-			<IonApp>
-				<IonReactRouter>
-					<IonSplitPane contentId='main'>
-						<Menu />
-						<Router />
-					</IonSplitPane>
-				</IonReactRouter>
-			</IonApp>
-		</UserContext.Provider>
+		<IonApp>
+			<IonReactRouter>
+				<IonSplitPane contentId='main'>
+					<AuthProvider>
+						<StorageProvider>
+							<NetworkProvider>
+								<Menu />
+								<Router />
+							</NetworkProvider>
+						</StorageProvider>
+					</AuthProvider>
+				</IonSplitPane>
+			</IonReactRouter>
+		</IonApp>
 	);
 };
 

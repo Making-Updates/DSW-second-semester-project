@@ -1,14 +1,7 @@
 import Avatar from '@material-ui/core/Avatar';
 import './Youtube.css';
-import { useState } from 'react';
 
 const Youtube = ({ data, itemNo }) => {
-	const [parsedDate, setParsedDate] = useState('');
-	console.log(
-		data['media:group'][0]['media:community'][0]['media:statistics'][0]['$']
-			.views
-	);
-
 	return (
 		<a
 			href={data['media:group'][0]['media:content'][0]['$'].url}
