@@ -1,7 +1,7 @@
 const Leaderboard = ({ data }) => {
 	return (
 		<div>
-			<table className='table table-dark table-hover'>
+			<table className='table table-striped table-bordered'>
 				<thead>
 					<tr>
 						<th scope='col'>#</th>
