@@ -1,37 +1,41 @@
 # Light Mode
 
-![light-about](light-about.png)
-![light-leaderboard](light-leaderboard.png)
-![light-leaderboard2](light-leaderboard2.png)
-![light-login-error](light-login-error.png)
-![light-login](light-login.png)
-![light-mlh](light-mlh.png)
-![light-quiz-category](light-quiz-category.png)
-![light-quiz-questions](light-quiz-questions.png)
-![light-quiz-score](light-quiz-score.png)
-![light-register-error](light-register-error.png)
-![light-register](light-register.png)
-![light-settings](light-settings.png)
-![light-side-menu](light-side-menu.png)
-![light-twitter](light-twitter.png)
-![light-update-password](light-update-password.png)
-![light-youtube](light-youtube.png)
+<p float="left">
+<img src="light-about.png" alt="image" width="200"/>
+<img src="light-leaderboard.png" alt="image" width="200"/>
+<img src="light-leaderboard2.png" alt="image" width="200"/>
+<img src="light-login-error.png" alt="image" width="200"/>
+<img src="light-login.png" alt="image" width="200"/>
+<img src="light-mlh.png" alt="image" width="200"/>
+<img src="light-quiz-category.png" alt="image" width="200"/>
+<img src="light-quiz-questions.png" alt="image" width="200"/>
+<img src="light-quiz-score.png" alt="image" width="200"/>
+<img src="light-register-error.png" alt="image" width="200"/>
+<img src="light-register.png" alt="image" width="200"/>
+<img src="light-settings.png" alt="image" width="200"/>
+<img src="light-side-menu.png" alt="image" width="200"/>
+<img src="light-twitter.png" alt="image" width="200"/>
+<img src="light-update-password.png" alt="image" width="200"/>
+<img src="light-youtube.png" alt="image" width="200"/>
+</p>
 
 # Dark Mode
 
-![dark-about](dark-about.png)
-![dark-leaderboard](dark-leaderboard.png)
-![dark-leaderboard2](dark-leaderboard2.png)
-![dark-login-error](dark-login-error.png)
-![dark-login](dark-login.png)
-![dark-mlh](dark-mlh.png)
-![dark-quiz-category-select](dark-quiz-category-select.png)
-![dark-quiz-questions](dark-quiz-questions.png)
-![dark-quiz-score](dark-quiz-score.png)
-![dark-register-error](dark-register-error.png)
-![dark-register](dark-register.png)
-![dark-settings](dark-settings.png)
-![dark-side-menu](dark-side-menu.png)
-![dark-twitter](dark-twitter.png)
-![dark-update-password](dark-update-password.png)
-![dark-youtube](dark-youtube.png)
+<p float="left">
+<img src="dark-about.png" alt="image" width="200"/>
+<img src="dark-leaderboard.png" alt="image" width="200"/>
+<img src="dark-leaderboard2.png" alt="image" width="200"/>
+<img src="dark-login-error.png" alt="image" width="200"/>
+<img src="dark-login.png" alt="image" width="200"/>
+<img src="dark-mlh.png" alt="image" width="200"/>
+<img src="dark-quiz-category-select.png" alt="image" width="200"/>
+<img src="dark-quiz-questions.png" alt="image" width="200"/>
+<img src="dark-quiz-score.png" alt="image" width="200"/>
+<img src="dark-register-error.png" alt="image" width="200"/>
+<img src="dark-register.png" alt="image" width="200"/>
+<img src="dark-settings.png" alt="image" width="200"/>
+<img src="dark-side-menu.png" alt="image" width="200"/>
+<img src="dark-twitter.png" alt="image" width="200"/>
+<img src="dark-update-password.png" alt="image" width="200"/>
+<img src="dark-youtube.png" alt="image" width="200"/>
+</p>
