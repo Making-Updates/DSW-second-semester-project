@@ -153,7 +153,7 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 
 ## Screen dumps of the application
 
-!fill in later
+Find our screen dumps [here](docs/screen-dumps/screenshots.md)
 
 ## Mockups
 
