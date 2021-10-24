@@ -198,7 +198,15 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 </p>
 ## Mockups
 
-!fill in later
+<p float="left">
+<img src="docs/mock-ups/card-design.png" alt="image" width="200"/>
+<img src="docs/mock-ups/login-screen.png" alt="image" width="200"/>
+<img src="docs/mock-ups/register-screen.png" alt="image" width="200"/>
+<img src="docs/mock-ups/side-bar.png" alt="image" width="200"/>
+<img src="docs/mock-ups/youtube-card.png" alt="image" width="200"/>
+<img src="docs/mock-ups/quiz.png" alt="image" width="200"/>
+<img src="docs/mock-ups/fingerprint-lock.png" alt="image" width="200"/>
+</p>
 
 ## Screen Flows
 
