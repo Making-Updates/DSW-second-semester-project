@@ -14,6 +14,8 @@
   - [Narratives](#narratives)
   - [Explanation of our Database and UML Diagram](#explanation-of-our-database-and-uml-diagram)
   - [Screen dumps of the application](#screen-dumps-of-the-application)
+- [Light Mode](#light-mode)
+- [Dark Mode](#dark-mode)
   - [Mockups](#mockups)
   - [Screen Flows](#screen-flows)
   - [Use Cases](#use-cases)
@@ -153,8 +155,47 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 
 ## Screen dumps of the application
 
-Find our screen dumps [here](docs/screen-dumps/screenshots.md)
+# Light Mode
 
+<p float="left">
+<img src="docs/screen-dumps/light-about.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-leaderboard.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-leaderboard2.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-login-error.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-login.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-mlh.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-quiz-category.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-quiz-questions.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-quiz-score.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-register-error.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-register.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-settings.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-side-menu.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-twitter.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-update-password.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/light-youtube.png" alt="image" width="200"/>
+</p>
+
+# Dark Mode
+
+<p float="left">
+<img src="docs/screen-dumps/dark-about.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-leaderboard.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-leaderboard2.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-login-error.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-login.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-mlh.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-quiz-category-select.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-quiz-questions.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-quiz-score.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-register-error.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-register.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-settings.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-side-menu.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-twitter.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-update-password.png" alt="image" width="200"/>
+<img src="docs/screen-dumps/dark-youtube.png" alt="image" width="200"/>
+</p>
 ## Mockups
 
 !fill in later
