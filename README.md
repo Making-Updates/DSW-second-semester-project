@@ -1,8 +1,8 @@
-# Dev Central
+# Dev Central 
 
-## Contents
+# Contents
 
-- [Dev Central](#dev-central)
+- [Dev Central](#dev-central) 
   - [Contents](#contents)
 - [dsw-semester2-project](#dsw-semester2-project)
 - [Group Members](#group-members)
@@ -14,8 +14,8 @@
   - [Narratives](#narratives)
   - [Explanation of our Database and UML Diagram](#explanation-of-our-database-and-uml-diagram)
   - [Screen dumps of the application](#screen-dumps-of-the-application)
-- [Light Mode](#light-mode)
-- [Dark Mode](#dark-mode)
+  - [Light Mode](#light-mode)
+  - [Dark Mode](#dark-mode)
   - [Mockups](#mockups)
   - [Screen Flows](#screen-flows)
   - [Use Cases](#use-cases)
@@ -31,31 +31,37 @@
 
 # Group Members
 
-Tiiso Senosha - 220003917 - theotiiso@gmail.com
+Team Member :family: | student Number :mortar_board: | Email address :e-mail:
+| :--- | :--- | :---
+ Tiiso Senosha        | 220003917   | theotiiso@gmail.com
+ Lesego Temane        | 219081209   | lesegogtemane@gmail.com
+ Waaiez Kinnear       | 219021671   | waaiez.kinnear10@gmail.com 
+ Alexis Makgeru       | 220042401   | sebotsealexis@gmail.com
+ Bonginkosi Nhantumbo | 217040604   | bonginkosi.li73@gmail.com
+ Blessing Leso        | 219089394   | blessingitlotlengleso@gmail.com
 
-Lesego Temane - 219081209 - lesegogtemane@gmail.com
-
-Waaiez Kinnear - 219021671 - waaiez.kinnear10@gmail.com
-
-Alexis Makgeru - 220042401 - sebotsealexis@gmail.com
-
-Bonginkosi Nhantumbo - 217040604 - bonginkosi.li73@gmail.com
-
-Blessing Leso - 219089394 - blessingitlotlengleso@gmail.com
 
 # Group Member Tasks
 
-Tiiso Senosha - Quiz Leaderboard, Styling
+Group Member :family:  | Tasks :pushpin:
+------------- | -------------
+ Tiiso Senosha| Quiz Leaderboard, Styling
+ Lesego Temane | MLH Cards, Styling
+ Waaiez Kinnear | Quiz, Settings, Database Setup
+ Alexis Makgeru | Twitter Cards, Styling
+ Bonginkosi Nhantumbo | Login Page, Register Page, Update Password Page, Styling
+ Blessing Leso | YouTube Cards, Styling
+ 
+ 
+  Group Member :family:| Tasks :pushpin: | Role :file_folder:
+| :--- | :--- | :---
+Tiiso Senosha  | Quiz Leaderboard, Styling | Project Manager, Front-End Developer, Tester
+Lesego Temane  | MLH Cards, Styling | Front-End Developer, Tester
+Waaiez Kinnear  | Quiz, Settings, Database Setup | Lead Programmer, Full-Stack Developer, Tester
+Alexis Makgeru  | Twitter Cards, Styling | Front-End Developer, Tester
+Bonginkosi Nhantumbo  | Login Page, Register Page, Update Password Page, Styling | Full-Stack Developer, Tester
+Blessing Leso  | YouTube Cards, Styling | Business Analyst, Front-End Developer
 
-Lesego Temane - MLH Cards, Styling
-
-Waaiez Kinnear - Quiz, Settings, Database Setup
-
-Alexis Makgeru - Twitter Cards, Styling
-
-Bonginkosi Nhantumbo - Login Page, Register Page, Update Password Page, Styling
-
-Blessing Leso - YouTube Cards, Styling
 
 # How to install
 
@@ -90,7 +96,7 @@ The above command will create the initial files needed to build an app for the s
 
 After the files have sync you can open either Android Stuido or xCode to build the application.
 
-# Documentation
+# Documentation 
 
 ## Tools used to build your application
 
@@ -165,7 +171,7 @@ Our database contains the following tables:
 
 ## Screen dumps of the application
 
-# Light Mode
+### Light Mode
 
 <p float="left">
 <img src="docs/screen-dumps/light-about.png" alt="image" width="200"/>
@@ -186,7 +192,7 @@ Our database contains the following tables:
 <img src="docs/screen-dumps/light-youtube.png" alt="image" width="200"/>
 </p>
 
-# Dark Mode
+### Dark Mode
 
 <p float="left">
 <img src="docs/screen-dumps/dark-about.png" alt="image" width="200"/>
