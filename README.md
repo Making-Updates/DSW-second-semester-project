@@ -120,31 +120,31 @@ After the files have sync you can open either Android Stuido or xCode to build t
 
 ## Narratives
 
-<b> How users uses our app </b>
+### How users use our app
 
 A user registers an account on our app to access tutorials, hackathons, software development news and compete with other programmers by taking quizzes. There is a leaderboard where the players can see their ranking.
 
-On the FreeCodeCamp YouTube page:
+<b>On the FreeCodeCamp YouTube page:</b>
 
 1. A user is presented with the latest tutorials from freeCodeCamp.org Youtube channel
 2. They click on a video that interests them the most.
    3.They are then redirected to youtube where they learn the technology.
 
-On the FreeCodeCamp Twitter page:
+<b>On the FreeCodeCamp Twitter page:</b>
 
 1. A user is presented with the latest news from freeCodeCamp.org Twitter page.
 2. They click on a tweet that interests them the most.
 3. They are then redirected to the freeCodeCamp.org blog in the browser.
 4. Through those blog posts they keep themselves knowledgeable about the IT world.
 
-On the MLH Hackathons page:
+<b>On the MLH Hackathons page:</b>
 
 1. A user is presented with the latest Hackathon events from MLH.io website
 2. They click on a event that interests them the most.
 3. They are then redirected to a page in the browser where they read more about the event and register to participate.
 4. They stand a chance to network with other tech enthusiasts and win prizes.
 
-On the Quiz page:
+<b>On the Quiz page:</b>
 
 1. You are presented with three(3) categories to choose from.
 2. You choose the subject and the difficulty level.
