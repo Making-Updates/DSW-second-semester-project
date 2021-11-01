@@ -63,7 +63,7 @@ Bonginkosi Nhantumbo  | Login Page, Register Page, Update Password Page, Styling
 Blessing Leso  | YouTube Cards, Styling | Business Analyst, Front-End Developer
 
 
-# How to install
+# How to install / Build our application
 
 First you need NodeJS and the Ionic CLI installed.
 Android Studio and/or xCode will also need to be installed in order to build the mobile application counterparts.
@@ -98,7 +98,7 @@ After the files have sync you can open either Android Stuido or xCode to build t
 
 # Documentation 
 
-## Tools used to build your application
+## Tools used to build our application
 
 -   React
 -   React Bootstrap
@@ -108,7 +108,7 @@ After the files have sync you can open either Android Stuido or xCode to build t
 -   Supabase
 -   Axios
 
-## Explanation of how these tools are integrated
+## Explanation of how these tools are integrated in our application
 
 -   React is used to build our User Interface
 -   React Bootstrap is used to style our User Interface
@@ -212,7 +212,8 @@ Our database contains the following tables:
 <img src="docs/screen-dumps/dark-update-password.png" alt="image" width="200"/>
 <img src="docs/screen-dumps/dark-youtube.png" alt="image" width="200"/>
 </p>
-## Mockups
+
+### Mockups
 
 <p float="left">
 <img src="docs/mock-ups/card-design.png" alt="image" width="200"/>
@@ -226,7 +227,7 @@ Our database contains the following tables:
 
 ## Screen Flows
 
-Our application requires users to log in before they can use the app. They will be redirected to the Login Page if they are not logged in.
+Our application requires users to log in before they can use certain functions in the app. They will be redirected to the Login Page if they are not logged in.
 
 On the Login Page users can either log in, go to the Register Page.
 
@@ -248,7 +249,7 @@ On the Settings Page users will be able to sign out and lock the app with their 
 
 ## Use Cases
 
--   Who is using the application
+-   Who is using our application
     -   People interested in Software Development
     -   Developers looking for tutorials.
     -   People looking for the next hackathon.
