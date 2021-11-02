@@ -6,11 +6,13 @@ import {
 	IonPage,
 	IonTitle,
 	IonToolbar,
+	useIonViewDidEnter,
 } from '@ionic/react';
-import Twitter from '../components/Twitter/Twitter';
+import { useEffect, useState } from 'react';
+
 import { fetchTwitterData } from '../api';
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
-import { useState, useEffect } from 'react';
+import Twitter from '../components/Twitter/Twitter';
 import { useNetwork } from '../context/NetworkContext';
 import { useStorage } from '../context/StorageContext';
 
@@ -27,15 +29,19 @@ const Page = () => {
 
 	// Fetch data from the api
 	async function fetchApiData() {
-		setIsLoading(true);
 		const initialTwitterData = await fetchTwitterData();
-		await setItem('twitterData', JSON.stringify(initialTwitterData));
-		let title = initialTwitterData.data.dataAsJson.title[0];
-		setTwitterName(title.split('/')[0]);
-		setTwitterUserName(title.split('/')[1]);
-		setTwitterImage(initialTwitterData.data.dataAsJson.image[0].url[0]);
-		setTwitterData(initialTwitterData.data.dataAsJson.item);
-		setIsLoading(false);
+		if (initialTwitterData === 'Error') {
+			fetchLocalData();
+		} else {
+			await setItem('twitterData', JSON.stringify(initialTwitterData));
+			console.log(initialTwitterData);
+			let title = initialTwitterData.data.dataAsJson.title[0];
+			setTwitterName(title.split('/')[0]);
+			setTwitterUserName(title.split('/')[1]);
+			setTwitterImage(initialTwitterData.data.dataAsJson.image[0].url[0]);
+			setTwitterData(initialTwitterData.data.dataAsJson.item);
+			setIsLoading(false);
+		}
 	}
 
 	// Fetch data from local storage
@@ -48,23 +54,30 @@ const Page = () => {
 			setTwitterImage('');
 			setTwitterData([]);
 		} else {
-			initialTwitterData = JSON.parse(initialTwitterData);
-			let title = initialTwitterData.data.dataAsJson.title[0];
+			let parseTwitterData = JSON.parse(initialTwitterData);
+			let title = parseTwitterData.data.dataAsJson.title[0];
 			setTwitterName(title.split('/')[0]);
 			setTwitterUserName(title.split('/')[1]);
-			setTwitterImage(initialTwitterData.data.dataAsJson.image[0].url[0]);
-			setTwitterData(initialTwitterData.data.dataAsJson.item);
+			setTwitterImage(parseTwitterData.data.dataAsJson.image[0].url[0]);
+			setTwitterData(parseTwitterData.data.dataAsJson.item);
 		}
 		setIsLoading(false);
 	}
 
-	useEffect(() => {
+	useIonViewDidEnter(() => {
 		setIsLoading(true);
 		if (networkStatus) {
 			fetchApiData();
 		} else {
 			fetchLocalData();
 		}
+	});
+
+	useEffect(() => {
+		setIsLoading(true);
+
+		fetchLocalData();
+		// fetchApiData();
 	}, []);
 
 	// Run everytime the network status changes
@@ -95,14 +108,14 @@ const Page = () => {
 					</IonToolbar>
 				</IonHeader>
 				{!networkStatus && (
-					<div className='alert alert-warning m-3' role='alert'>
+					<div className='m-3 alert alert-warning' role='alert'>
 						You are currently offline. Using local data.
 					</div>
 				)}
 				{isLoading ? (
 					<LoadingIcon />
 				) : twitterData.length === 0 ? (
-					<div className='alert alert-danger m-3' role='alert'>
+					<div className='m-3 alert alert-danger' role='alert'>
 						No Data Found
 					</div>
 				) : (

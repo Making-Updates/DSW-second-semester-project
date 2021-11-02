@@ -6,11 +6,13 @@ import {
 	IonPage,
 	IonTitle,
 	IonToolbar,
+	useIonViewDidEnter,
 } from '@ionic/react';
-import MLH from '../components/Mlh/MLH';
+import { useEffect, useState } from 'react';
+
 import { fetchMlhData } from '../api';
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
-import { useState, useEffect } from 'react';
+import MLH from '../components/Mlh/MLH';
 import { useNetwork } from '../context/NetworkContext';
 import { useStorage } from '../context/StorageContext';
 
@@ -43,6 +45,15 @@ const Page = () => {
 		}
 		setIsLoading(false);
 	}
+
+	useIonViewDidEnter(() => {
+		setIsLoading(true);
+		if (networkStatus) {
+			fetchApiData();
+		} else {
+			fetchLocalData();
+		}
+	});
 
 	useEffect(() => {
 		setIsLoading(true);
@@ -81,14 +92,14 @@ const Page = () => {
 					</IonToolbar>
 				</IonHeader>
 				{!networkStatus && (
-					<div className='alert alert-warning m-3' role='alert'>
+					<div className='m-3 alert alert-warning' role='alert'>
 						You are currently offline. Using local data.
 					</div>
 				)}
 				{isLoading ? (
 					<LoadingIcon />
 				) : eventData.length === 0 ? (
-					<div className='alert alert-danger m-3' role='alert'>
+					<div className='m-3 alert alert-danger' role='alert'>
 						No Data Found
 					</div>
 				) : (

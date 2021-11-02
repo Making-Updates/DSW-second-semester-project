@@ -1,20 +1,22 @@
-import { useState, useEffect } from 'react';
 import {
 	IonButtons,
 	IonContent,
 	IonHeader,
+	IonLabel,
 	IonMenuButton,
 	IonPage,
-	IonTitle,
-	IonToolbar,
-	IonLabel,
 	IonSegment,
 	IonSegmentButton,
+	IonTitle,
+	IonToolbar,
+	useIonViewDidEnter,
 } from '@ionic/react';
-import { supabase } from '../supabase';
+import { useEffect, useState } from 'react';
+
 import Leaderboard from '../components/Leaderboard/Leaderboard';
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
 import { useNetwork } from '../context/NetworkContext';
+import { supabase } from '../supabase';
 
 const Page = () => {
 	const [category, setCategory] = useState(null);
@@ -41,6 +43,13 @@ const Page = () => {
 			setIsLoading(false);
 		}
 	}
+
+	useIonViewDidEnter(() => {
+		if (difficulty != null && category != null) {
+			setIsLoading(true);
+			select();
+		}
+	});
 
 	useEffect(() => {
 		if (!networkStatus) {
@@ -105,7 +114,7 @@ const Page = () => {
 					</IonSegmentButton>
 				</IonSegment>
 				{!networkStatus ? (
-					<div className='alert alert-warning m-3' role='alert'>
+					<div className='m-3 alert alert-warning' role='alert'>
 						You are currently offline. Please try again once you
 						have a network connection.
 					</div>

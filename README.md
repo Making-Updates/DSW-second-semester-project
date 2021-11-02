@@ -20,10 +20,23 @@
   - [Screen Flows](#screen-flows)
   - [Use Cases](#use-cases)
   - [Application Requirements](#application-requirements)
+  - [Non-Functional Application Requirements](#non-functional-application-requirements)
   - [Problem Statement](#problem-statement)
   - [Problem Objective](#problem-objective)
   - [Proposed Solution](#proposed-solution)
   - [Solution Design](#solution-design)
+  - [Running In Android Studio](#running-in-android-studio)
+  - [Debugging In Android Studio](#debugging-in-android-studio)
+  - [Profiling In Android Studio](#profiling-in-android-studio)
+        - [Pink dots indicate touches](#pink-dots-indicate-touches)
+  - [Lifecycle methods](#lifecycle-methods)
+  - [App Data Storage](#app-data-storage)
+        - [Data is stored for offline use in localstorage](#data-is-stored-for-offline-use-in-localstorage)
+  - [Version Control](#version-control)
+  - [Database View](#database-view)
+        - [Auth table containing our user data](#auth-table-containing-our-user-data)
+        - [Table containing all our scores, views are created off this table to display scores](#table-containing-all-our-scores-views-are-created-off-this-table-to-display-scores)
+        - [Row Level Security Polices we have enabled](#row-level-security-polices-we-have-enabled)
 
 # dsw-semester2-project
 
@@ -196,6 +209,7 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 <img src="docs/screen-dumps/dark-update-password.png" alt="image" width="200"/>
 <img src="docs/screen-dumps/dark-youtube.png" alt="image" width="200"/>
 </p>
+
 ## Mockups
 
 <p float="left">
@@ -257,6 +271,10 @@ On the Settings Page users will be able to sign out and lock the app with their 
 -   [x] Settings page with signout button
 -   [ ] Settings page with setting to lock the app with your fingerprint
 
+## Non-Functional Application Requirements
+
+-   [ ] Settings page with setting to lock the app with your fingerprint
+
 ## Problem Statement
 
 People with an intetest for software development often don't know where to start looking for tutorials, quizzes to evaluate their knowledge of programming, latest news on software development and hackathons to participate in.
@@ -272,3 +290,49 @@ We have developed a mobile application where users can view the latest hackathon
 ## Solution Design
 
 !fill in later
+
+## Running In Android Studio
+
+<img src="docs/running-in-android-Studio.png" alt="image" />
+
+## Debugging In Android Studio
+
+<img src="docs/as-debugging-1.png" alt="image" />
+<img src="docs/as-debugging-2.png" alt="image" />
+
+## Profiling In Android Studio
+
+##### Pink dots indicate touches
+
+<img src="docs/as-profiler-1.png" alt="image" />
+<img src="docs/as-profiler-2.png" alt="image" />
+<img src="docs/as-profiler-3.png" alt="image" />
+
+## Lifecycle methods
+
+<img src="docs/lifecycle-methods.png" alt="image" />
+
+## App Data Storage
+
+##### Data is stored for offline use in localstorage
+
+<img src="docs/app-data-storage.png" alt="image" />
+
+## Version Control
+
+<img src="docs/version-control-1.png" alt="image" />
+<img src="docs/version-control-2.png" alt="image" />
+
+## Database View
+
+##### Auth table containing our user data
+
+<img src="docs/db-users-table.png" alt="image" />
+
+##### Table containing all our scores, views are created off this table to display scores
+
+<img src="docs/db-scores-table.png" alt="image" />
+
+##### Row Level Security Polices we have enabled
+
+<img src="docs/db-rls-policies.png" alt="image" />

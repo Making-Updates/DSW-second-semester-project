@@ -1,16 +1,19 @@
 import { useEffect } from 'react';
-import { supabase } from '../../supabase';
 import { useHistory } from 'react-router-dom';
+
+import { useAuth } from '../../context/AuthContext';
+import { supabase } from '../../supabase';
 
 function Score({ score, category, difficulty }) {
 	const history = useHistory();
+	const { user } = useAuth();
 
 	useEffect(() => {
 		async function insertData() {
 			const session = supabase.auth.session();
 			const { data, error } = await supabase.from('scores').insert([
 				{
-					email: session?.user.email,
+					email: user,
 					category: category,
 					score: score,
 					difficulty: difficulty,
@@ -44,10 +47,9 @@ function Score({ score, category, difficulty }) {
 			</div>
 			<div className='fixed-bottom d-flex justify-content-center'>
 				<button
-					className='col mx-2 my-3 btn btn-light btn-lg border border-primary'
+					className='mx-2 my-3 border col btn btn-light btn-lg border-primary'
 					type='button'
-					onClick={showLeaderboard}
-				>
+					onClick={showLeaderboard}>
 					Show Leaderboard
 				</button>
 			</div>

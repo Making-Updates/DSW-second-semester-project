@@ -6,11 +6,13 @@ import {
 	IonPage,
 	IonTitle,
 	IonToolbar,
+	useIonViewDidEnter,
 } from '@ionic/react';
-import Youtube from '../components/Youtube/Youtube';
+import { useEffect, useState } from 'react';
+
 import { fetchYoutubeData } from '../api';
 import LoadingIcon from '../components/LoadingIcon/LoadingIcon';
-import { useState, useEffect } from 'react';
+import Youtube from '../components/Youtube/Youtube';
 import { useNetwork } from '../context/NetworkContext';
 import { useStorage } from '../context/StorageContext';
 
@@ -42,6 +44,15 @@ const Page = () => {
 		}
 		setIsLoading(false);
 	}
+
+	useIonViewDidEnter(() => {
+		setIsLoading(true);
+		if (networkStatus) {
+			fetchApiData();
+		} else {
+			fetchLocalData();
+		}
+	});
 
 	useEffect(() => {
 		setIsLoading(true);

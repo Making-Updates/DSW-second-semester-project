@@ -10,7 +10,7 @@ export const fetchTwitterData = async () => {
 		const data = await axios.get(twitterURL);
 		return data;
 	} catch (error) {
-		return error;
+		return 'Error';
 	}
 };
 
@@ -19,7 +19,7 @@ export const fetchYoutubeData = async () => {
 		const data = await axios.get(youtubeURL);
 		return data;
 	} catch (error) {
-		return error;
+		return 'Error';
 	}
 };
 
@@ -28,7 +28,7 @@ export const fetchMlhData = async () => {
 		const data = await axios.get(mlhURL);
 		return data;
 	} catch (error) {
-		return error;
+		return 'Error';
 	}
 };
 
