@@ -307,7 +307,7 @@ We have developed a mobile application where users can view the latest hackathon
 
 ## Running In Android Studio
 
-<img src="docs/running-in-android-Studio.png" alt="image" />
+<img src="docs/running-in-android-studio.png" alt="image" />
 
 ## Debugging In Android Studio
 
