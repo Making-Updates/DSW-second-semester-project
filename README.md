@@ -25,7 +25,6 @@
   - [Problem Statement](#problem-statement)
   - [Problem Objective](#problem-objective)
   - [Proposed Solution](#proposed-solution)
-  - [Solution Design](#solution-design)
   - [Running In Android Studio](#running-in-android-studio)
   - [Debugging In Android Studio](#debugging-in-android-studio)
   - [Profiling In Android Studio](#profiling-in-android-studio)
@@ -55,15 +54,6 @@
 | Blessing Leso        | 219089394                     | blessingitlotlengleso@gmail.com |
 
 # Group Member Tasks
-
-| Group Member :family: | Tasks :pushpin:                                          |
-| --------------------- | -------------------------------------------------------- |
-| Tiiso Senosha         | Quiz Leaderboard, Styling                                |
-| Lesego Temane         | MLH Cards, Styling                                       |
-| Waaiez Kinnear        | Quiz, Settings, Database Setup                           |
-| Alexis Makgeru        | Twitter Cards, Styling                                   |
-| Bonginkosi Nhantumbo  | Login Page, Register Page, Update Password Page, Styling |
-| Blessing Leso         | YouTube Cards, Styling                                   |
 
 | Group Member :family: | Tasks :pushpin:                                          | Role :file_folder:                            |
 | :-------------------- | :------------------------------------------------------- | :-------------------------------------------- |
@@ -300,10 +290,6 @@ Our app is one that solves the problem of simplifying ones life in terms of acce
 ## Proposed Solution
 
 We have developed a mobile application where users can view the latest hackathons taking place, view the latest news published by freecodecamp.org, find the latest tutorials taught by professional developers and take quizzes to improve their knowledge.
-
-## Solution Design
-
-!fill in later
 
 ## Running In Android Studio
 
