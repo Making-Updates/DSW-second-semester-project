@@ -1,21 +1,22 @@
 # Dev Central
 
-## Contents
+# Contents
 
 - [Dev Central](#dev-central)
-  - [Contents](#contents)
+- [Contents](#contents)
 - [dsw-semester2-project](#dsw-semester2-project)
 - [Group Members](#group-members)
 - [Group Member Tasks](#group-member-tasks)
-- [How to install](#how-to-install)
+- [How to install / Build our application](#how-to-install--build-our-application)
 - [Documentation](#documentation)
-  - [Tools used to build your application](#tools-used-to-build-your-application)
-  - [Explanation of how these tools are integrated](#explanation-of-how-these-tools-are-integrated)
+  - [Tools used to build our application](#tools-used-to-build-our-application)
+  - [Explanation of how these tools are integrated in our application](#explanation-of-how-these-tools-are-integrated-in-our-application)
   - [Narratives](#narratives)
+    - [How users use our app](#how-users-use-our-app)
   - [Explanation of our Database and UML Diagram](#explanation-of-our-database-and-uml-diagram)
   - [Screen dumps of the application](#screen-dumps-of-the-application)
-- [Light Mode](#light-mode)
-- [Dark Mode](#dark-mode)
+    - [Light Mode](#light-mode)
+    - [Dark Mode](#dark-mode)
   - [Mockups](#mockups)
   - [Screen Flows](#screen-flows)
   - [Use Cases](#use-cases)
@@ -44,33 +45,36 @@
 
 # Group Members
 
-Tiiso Senosha - 220003917 - theotiiso@gmail.com
-
-Lesego Temane - 219081209 - lesegogtemane@gmail.com
-
-Waaiez Kinnear - 219021671 - waaiez.kinnear10@gmail.com
-
-Alexis Makgeru - 220042401 - sebotsealexis@gmail.com
-
-Bonginkosi Nhantumbo - 217040604 - bonginkosi.li73@gmail.com
-
-Blessing Leso - 219089394 - blessingitlotlengleso@gmail.com
+| Team Member :family: | student Number :mortar_board: | Email address :e-mail:          |
+| :------------------- | :---------------------------- | :------------------------------ |
+| Tiiso Senosha        | 220003917                     | theotiiso@gmail.com             |
+| Lesego Temane        | 219081209                     | lesegogtemane@gmail.com         |
+| Waaiez Kinnear       | 219021671                     | waaiez.kinnear10@gmail.com      |
+| Alexis Makgeru       | 220042401                     | sebotsealexis@gmail.com         |
+| Bonginkosi Nhantumbo | 217040604                     | bonginkosi.li73@gmail.com       |
+| Blessing Leso        | 219089394                     | blessingitlotlengleso@gmail.com |
 
 # Group Member Tasks
 
-Tiiso Senosha - Quiz Leaderboard, Styling
+| Group Member :family: | Tasks :pushpin:                                          |
+| --------------------- | -------------------------------------------------------- |
+| Tiiso Senosha         | Quiz Leaderboard, Styling                                |
+| Lesego Temane         | MLH Cards, Styling                                       |
+| Waaiez Kinnear        | Quiz, Settings, Database Setup                           |
+| Alexis Makgeru        | Twitter Cards, Styling                                   |
+| Bonginkosi Nhantumbo  | Login Page, Register Page, Update Password Page, Styling |
+| Blessing Leso         | YouTube Cards, Styling                                   |
 
-Lesego Temane - MLH Cards, Styling
+| Group Member :family: | Tasks :pushpin:                                          | Role :file_folder:                            |
+| :-------------------- | :------------------------------------------------------- | :-------------------------------------------- |
+| Tiiso Senosha         | Quiz Leaderboard, Styling                                | Project Manager, Front-End Developer, Tester  |
+| Lesego Temane         | MLH Cards, Styling                                       | Front-End Developer, Tester                   |
+| Waaiez Kinnear        | Quiz, Settings, Database Setup                           | Lead Programmer, Full-Stack Developer, Tester |
+| Alexis Makgeru        | Twitter Cards, Styling                                   | Front-End Developer, Tester                   |
+| Bonginkosi Nhantumbo  | Login Page, Register Page, Update Password Page, Styling | Full-Stack Developer, Tester                  |
+| Blessing Leso         | YouTube Cards, Styling                                   | Business Analyst, Front-End Developer         |
 
-Waaiez Kinnear - Quiz, Settings, Database Setup
-
-Alexis Makgeru - Twitter Cards, Styling
-
-Bonginkosi Nhantumbo - Login Page, Register Page, Update Password Page, Styling
-
-Blessing Leso - YouTube Cards, Styling
-
-# How to install
+# How to install / Build our application
 
 First you need NodeJS and the Ionic CLI installed.
 Android Studio and/or xCode will also need to be installed in order to build the mobile application counterparts.
@@ -105,7 +109,7 @@ After the files have sync you can open either Android Stuido or xCode to build t
 
 # Documentation
 
-## Tools used to build your application
+## Tools used to build our application
 
 -   React
 -   React Bootstrap
@@ -115,7 +119,7 @@ After the files have sync you can open either Android Stuido or xCode to build t
 -   Supabase
 -   Axios
 
-## Explanation of how these tools are integrated
+## Explanation of how these tools are integrated in our application
 
 -   React is used to build our User Interface
 -   React Bootstrap is used to style our User Interface
@@ -127,31 +131,31 @@ After the files have sync you can open either Android Stuido or xCode to build t
 
 ## Narratives
 
-<b> How users uses our app </b>
+### How users use our app
 
 A user registers an account on our app to access tutorials, hackathons, software development news and compete with other programmers by taking quizzes. There is a leaderboard where the players can see their ranking.
 
-On the FreeCodeCamp YouTube page:
+<b>On the FreeCodeCamp YouTube page:</b>
 
 1. A user is presented with the latest tutorials from freeCodeCamp.org Youtube channel
 2. They click on a video that interests them the most.
    3.They are then redirected to youtube where they learn the technology.
 
-On the FreeCodeCamp Twitter page:
+<b>On the FreeCodeCamp Twitter page:</b>
 
 1. A user is presented with the latest news from freeCodeCamp.org Twitter page.
 2. They click on a tweet that interests them the most.
 3. They are then redirected to the freeCodeCamp.org blog in the browser.
 4. Through those blog posts they keep themselves knowledgeable about the IT world.
 
-On the MLH Hackathons page:
+<b>On the MLH Hackathons page:</b>
 
 1. A user is presented with the latest Hackathon events from MLH.io website
 2. They click on a event that interests them the most.
 3. They are then redirected to a page in the browser where they read more about the event and register to participate.
 4. They stand a chance to network with other tech enthusiasts and win prizes.
 
-On the Quiz page:
+<b>On the Quiz page:</b>
 
 1. You are presented with three(3) categories to choose from.
 2. You choose the subject and the difficulty level.
@@ -164,11 +168,21 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 
 ## Explanation of our Database and UML Diagram
 
-!fill in later
+<p float="left">
+  <img src="docs/UMLs.png" alt="image" width="600"/>
+<p/>
+
+Our database contains the following tables:
+
+<h3>Authentication</h3>
+- This table contains user login details. When a user registers their account we store their credentials here,namely userID and Email address, and retrieve them later when they sign in
+
+<h3>Scores</h3>
+- The scores table contains the score details of users. When a user has finished taking a quiz we store their email address, the category of the quiz that they took and the difficulty level of their quiz. We then retrieve and display their details on the leader scoreboard together with their ranking.
 
 ## Screen dumps of the application
 
-# Light Mode
+### Light Mode
 
 <p float="left">
 <img src="docs/screen-dumps/light-about.png" alt="image" width="200"/>
@@ -189,7 +203,7 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 <img src="docs/screen-dumps/light-youtube.png" alt="image" width="200"/>
 </p>
 
-# Dark Mode
+### Dark Mode
 
 <p float="left">
 <img src="docs/screen-dumps/dark-about.png" alt="image" width="200"/>
@@ -224,7 +238,7 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 
 ## Screen Flows
 
-Our application requires users to log in before they can use the app. They will be redirected to the Login Page if they are not logged in.
+Our application requires users to log in before they can use certain functions in the app. They will be redirected to the Login Page if they are not logged in.
 
 On the Login Page users can either log in, go to the Register Page.
 
@@ -246,7 +260,7 @@ On the Settings Page users will be able to sign out and lock the app with their 
 
 ## Use Cases
 
--   Who is using the application
+-   Who is using our application
     -   People interested in Software Development
     -   Developers looking for tutorials.
     -   People looking for the next hackathon.
