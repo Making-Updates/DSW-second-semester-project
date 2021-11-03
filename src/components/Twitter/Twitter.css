@@ -13,11 +13,17 @@
 
 .tweetContent > img {
 	border-radius: 20px;
+	width: 0px;
+	height: 0px;
 }
 
 .tweetHeaderDescription {
-	/* margin-bottom: 5px; */
+	/*margin-bottom: 5px;*/
 	font-size: 15px;
+}
+.tweetHeaderDescription > img{
+	width: 0px;
+	height: 0px;
 }
 
 .tweetHeaderText > h3 {
@@ -39,3 +45,7 @@
 .tweetAvatar {
 	padding: 20px;
 }
+img {
+	width: 226px;
+	/* height: 0px; */
+} 
