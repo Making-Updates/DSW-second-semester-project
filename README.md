@@ -4,7 +4,6 @@
 
 - [Dev Central](#dev-central)
 - [Contents](#contents)
-- [dsw-semester2-project](#dsw-semester2-project)
 - [Group Members](#group-members)
 - [Group Member Tasks](#group-member-tasks)
 - [How to install / Build our application](#how-to-install--build-our-application)
@@ -37,8 +36,6 @@
         - [Auth table containing our user data](#auth-table-containing-our-user-data)
         - [Table containing all our scores, views are created off this table to display scores](#table-containing-all-our-scores-views-are-created-off-this-table-to-display-scores)
         - [Row Level Security Polices we have enabled](#row-level-security-polices-we-have-enabled)
-
-# dsw-semester2-project
 
 ---
 
