@@ -161,10 +161,10 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 
 Our database contains the following tables:
 
-<h3>Authentication</h3>
+### Authentication
 - This table contains user login details. When a user registers their account we store their credentials in the Authentication table,namely userID and Email address, and retrieve them later when they sign in
 
-<h3>Scores</h3>
+### Scores
 - The scores table contains the score details of users. When a user has finished taking a quiz we store their email address, the category of the quiz that they took and the difficulty level of their quiz. We then retrieve and display their details on the leader scoreboard together with their ranking.
 
 ## Screen dumps of the application
