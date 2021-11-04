@@ -1,5 +1,5 @@
 <p float="left">
-  <img src="docs/logo/logo.jpg" alt="image" border-radius="50px"/>
+  <img src="docs/logo/logo.jpg" alt="image" height="200px" width="200px" border-radius="50%"/>
 <p/>
 
 # Dev Central
@@ -221,15 +221,15 @@ Our database contains the following tables:
 <h2>Mockups</h2>
 
 <p float="left">
-<img src="docs/mock-ups/card-design.png" alt="image" width="200"/>
-<img src="docs/mock-ups/login-screen.png" alt="image" width="200"/>
-<img src="docs/mock-ups/register-screen.png" alt="image" width="200"/>
-<img src="docs/mock-ups/side-bar.png" alt="image" width="200"/>
-<img src="docs/mock-ups/youtube.jpg" alt="image" width="200"/>
-<img src="docs/mock-ups/leaderboard.jpg" alt="image" width="200"/>
-<img src="docs/mock-ups/quiz-page.jpg" alt="image" width="200"/>
-<img src="docs/mock-ups/mlh.jpg" alt="image" width="200"/>
-<img src="docs/mock-ups/settings.jpg" alt="image" width="200"/>
+<img src="docs/mock-ups/card-design.png" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/login-screen.png" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/register-screen.png" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/side-bar.png" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/youtube.jpg" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/leaderboard.jpg" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/quiz-page.jpg" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/mlh.jpg" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/settings.jpg" alt="image" width="200" height="377"/>
 </p>
 
 <h2>Screen Flows</h2>
