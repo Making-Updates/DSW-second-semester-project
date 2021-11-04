@@ -1,6 +1,6 @@
-# Dev Central
+# Dev Central :star:
 
-# Contents
+# Contents :book:
 
 - [Product Roadmap](#product-roadmap)
 - [Group Members](#group-members)
@@ -42,6 +42,7 @@
 <p float="left">
   <img src="docs/product-roadmap/roadmap.png" alt="image" width="2260"/>
 <p/>
+
 # Group Members
 
 | Team Member :family: | student Number :mortar_board: | Email address :e-mail:          |
