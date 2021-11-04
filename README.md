@@ -1,9 +1,12 @@
+<p float="left">
+  <img src="docs/logo/logo.jpg" alt="image" border-radius="50px"/>
+<p/>
+
 # Dev Central
 
 # Contents
 
-- [Dev Central](#dev-central)
-- [Contents](#contents)
+- [Product Roadmap](#product-roadmap)
 - [Group Members](#group-members)
 - [Group Member Tasks](#group-member-tasks)
 - [How to install / Build our application](#how-to-install--build-our-application)
@@ -39,6 +42,10 @@
 
 ---
 
+# Product Roadmap
+<p float="left">
+  <img src="docs/product-roadmap/roadmap.png" alt="image" width="2260"/>
+<p/>
 # Group Members
 
 | Team Member :family: | student Number :mortar_board: | Email address :e-mail:          |
@@ -218,9 +225,11 @@ Our database contains the following tables:
 <img src="docs/mock-ups/login-screen.png" alt="image" width="200"/>
 <img src="docs/mock-ups/register-screen.png" alt="image" width="200"/>
 <img src="docs/mock-ups/side-bar.png" alt="image" width="200"/>
-<img src="docs/mock-ups/youtube-card.png" alt="image" width="200"/>
-<img src="docs/mock-ups/quiz.png" alt="image" width="200"/>
-<img src="docs/mock-ups/fingerprint-lock.png" alt="image" width="200"/>
+<img src="docs/mock-ups/youtube.jpg" alt="image" width="200"/>
+<img src="docs/mock-ups/leaderboard.jpg" alt="image" width="200"/>
+<img src="docs/mock-ups/quiz-page.jpg" alt="image" width="200"/>
+<img src="docs/mock-ups/mlh.jpg" alt="image" width="200"/>
+<img src="docs/mock-ups/settings.jpg" alt="image" width="200"/>
 </p>
 
 <h2>Screen Flows</h2>
