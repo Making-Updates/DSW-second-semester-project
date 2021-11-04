@@ -161,15 +161,15 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 
 Our database contains the following tables:
 
-### Authentication
+<h3>Authentication</h3>
 - This table contains user login details. When a user registers their account we store their credentials in the Authentication table,namely userID and Email address, and retrieve them later when they sign in
 
-### Scores
+<h3>Scores</h3>
 - The scores table contains the score details of users. When a user has finished taking a quiz we store their email address, the category of the quiz that they took and the difficulty level of their quiz. We then retrieve and display their details on the leader scoreboard together with their ranking.
 
-## Screen dumps of the application
+<h2>Screen dumps of the application</h2>
 
-### Light Mode
+<h3>Light Mode</h3>
 
 <p float="left">
 <img src="docs/screen-dumps/light-about.png" alt="image" width="200"/>
@@ -190,7 +190,7 @@ Our database contains the following tables:
 <img src="docs/screen-dumps/light-youtube.png" alt="image" width="200"/>
 </p>
 
-### Dark Mode
+<h3>Dark Mode</h3>
 
 <p float="left">
 <img src="docs/screen-dumps/dark-about.png" alt="image" width="200"/>
@@ -211,7 +211,7 @@ Our database contains the following tables:
 <img src="docs/screen-dumps/dark-youtube.png" alt="image" width="200"/>
 </p>
 
-## Mockups
+<h2>Mockups</h2>
 
 <p float="left">
 <img src="docs/mock-ups/card-design.png" alt="image" width="200"/>
@@ -223,7 +223,7 @@ Our database contains the following tables:
 <img src="docs/mock-ups/fingerprint-lock.png" alt="image" width="200"/>
 </p>
 
-## Screen Flows
+<h2>Screen Flows</h2>
 
 Our application requires users to log in before they can use certain functions in the app. They will be redirected to the Login Page if they are not logged in.
 
@@ -245,7 +245,7 @@ On the Quiz Leaderboard Page users will be able to see the top scores saved in t
 
 On the Settings Page users will be able to sign out and lock the app with their fingerprint.
 
-## Use Cases
+<h2>Use Cases</h2>
 
 -   Who is using our application
     -   People interested in Software Development
@@ -261,7 +261,7 @@ On the Settings Page users will be able to sign out and lock the app with their 
     -   To polish their skills.
     -   To find out about the latest programming technologies.
 
-## Application Requirements
+<h2>Application Requirements</h2>
 
 -   [x] Side bar with all the pages
 -   [x] MLH page with latest Hackathons
@@ -272,64 +272,64 @@ On the Settings Page users will be able to sign out and lock the app with their 
 -   [x] Settings page with signout button
 -   [ ] Settings page with setting to lock the app with your fingerprint
 
-## Non-Functional Application Requirements
+<h2>Non-Functional Application Requirements</h2>
 
 -   [ ] Settings page with setting to lock the app with your fingerprint
 
-## Problem Statement
+<h2>Problem Statement</h2>
 
 People with an intetest for software development often don't know where to start looking for tutorials, quizzes to evaluate their knowledge of programming, latest news on software development and hackathons to participate in.
 
-## Problem Objective
+<h2>Problem Objective</h2>
 
 Our app is one that solves the problem of simplifying ones life in terms of accessing information about the programming world by consolidating information into one app.
 
-## Proposed Solution
+<h2>Proposed Solution</h2>
 
 We have developed a mobile application where users can view the latest hackathons taking place, view the latest news published by freecodecamp.org, find the latest tutorials taught by professional developers and take quizzes to improve their knowledge.
 
-## Running In Android Studio
+<h2>Running In Android Studio</h2>
 
 <img src="docs/running-in-android-studio.png" alt="image" />
 
-## Debugging In Android Studio
+<h2>Debugging In Android Studio</h2>
 
 <img src="docs/as-debugging-1.png" alt="image" />
 <img src="docs/as-debugging-2.png" alt="image" />
 
-## Profiling In Android Studio
+<h2>Profiling In Android Studio</h2>
 
-##### Pink dots indicate touches
+<h5>Pink dots indicate touches</h5>
 
 <img src="docs/as-profiler-1.png" alt="image" />
 <img src="docs/as-profiler-2.png" alt="image" />
 <img src="docs/as-profiler-3.png" alt="image" />
 
-## Lifecycle methods
+<h2>Lifecycle methods</h2>
 
 <img src="docs/lifecycle-methods.png" alt="image" />
 
-## App Data Storage
+<h2>App Data Storage</h2>
 
-##### Data is stored for offline use in localstorage
+<h5>Data is stored for offline use in localstorage</h5>
 
 <img src="docs/app-data-storage.png" alt="image" />
 
-## Version Control
+<h2>Version Control</h2>
 
 <img src="docs/version-control-1.png" alt="image" />
 <img src="docs/version-control-2.png" alt="image" />
 
-## Database View
+<h2>Database View</h2>
 
-##### Auth table containing our user data
+<h5>Auth table containing our user data</h5>
 
 <img src="docs/db-users-table.png" alt="image" />
 
-##### Table containing all our scores, views are created off this table to display scores
+<h5>Table containing all our scores, views are created off this table to display scores</h5>
 
 <img src="docs/db-scores-table.png" alt="image" />
 
-##### Row Level Security Polices we have enabled
+<h5>Row Level Security Polices we have enabled</h5>
 
 <img src="docs/db-rls-policies.png" alt="image" />
