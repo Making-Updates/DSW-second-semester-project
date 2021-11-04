@@ -1,7 +1,3 @@
-<p float="left">
-  <img src="docs/logo/logo.jpg" alt="image" height="200px" width="200px" border-radius="50%"/>
-<p/>
-
 # Dev Central
 
 # Contents
