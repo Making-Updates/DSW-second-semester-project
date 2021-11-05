@@ -1,10 +1,6 @@
-<p float="left">
-  <img src="docs/logo/logo.jpg" alt="image" border-radius="50px"/>
-<p/>
+# Dev Central <img src="docs/logo/devcentral.png" alt="image" />
 
-# Dev Central
-
-# Contents
+# Contents :book:
 
 - [Product Roadmap](#product-roadmap)
 - [Group Members](#group-members)
@@ -16,6 +12,7 @@
   - [Narratives](#narratives)
     - [How users use our app](#how-users-use-our-app)
   - [Explanation of our Database and UML Diagram](#explanation-of-our-database-and-uml-diagram)
+  - [Explanation of our relational model and ERD Diagram](#explanation-of-our-database-and-uml-diagram)
   - [Screen dumps of the application](#screen-dumps-of-the-application)
     - [Light Mode](#light-mode)
     - [Dark Mode](#dark-mode)
@@ -46,6 +43,7 @@
 <p float="left">
   <img src="docs/product-roadmap/roadmap.png" alt="image" width="2260"/>
 <p/>
+
 # Group Members
 
 | Team Member :family: | student Number :mortar_board: | Email address :e-mail:          |
@@ -163,7 +161,7 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 ## Explanation of our Database and UML Diagram
 
 <p float="left">
-  <img src="docs/UMLs.png" alt="image" width="600"/>
+  <img src="docs/uml/UML.png" alt="image" width="600"/>
 <p/>
 
 Our database contains the following tables:
@@ -173,6 +171,14 @@ Our database contains the following tables:
 
 <h3>Scores</h3>
 - The scores table contains the score details of users. When a user has finished taking a quiz we store their email address, the category of the quiz that they took and the difficulty level of their quiz. We then retrieve and display their details on the leader scoreboard together with their ranking.
+
+## Explanation of our relational model and ERD Diagram
+<p float="left">
+  <img src="docs/erd/ERD.png" alt="image" width="600"/>
+<p/>
+<p>
+  After the user has signed up, we store their username, in this case an email, in the database. We use the data from the Users table to log them in. Once signed in, many users have the option to take a quiz multiple times, we do not have any restriction on the number of quizzes they can take. We have three categories and three difficulty levels. The users have many options to choose from and once they have taken a quiz we record their score on the leaderboard. Our algorithm will display their score on the leaderboard that matches the category and difficulty of the quiz that they have taken. 
+</p>
 
 <h2>Screen dumps of the application</h2>
 
@@ -221,15 +227,15 @@ Our database contains the following tables:
 <h2>Mockups</h2>
 
 <p float="left">
-<img src="docs/mock-ups/card-design.png" alt="image" width="200"/>
-<img src="docs/mock-ups/login-screen.png" alt="image" width="200"/>
-<img src="docs/mock-ups/register-screen.png" alt="image" width="200"/>
-<img src="docs/mock-ups/side-bar.png" alt="image" width="200"/>
-<img src="docs/mock-ups/youtube.jpg" alt="image" width="200"/>
-<img src="docs/mock-ups/leaderboard.jpg" alt="image" width="200"/>
-<img src="docs/mock-ups/quiz-page.jpg" alt="image" width="200"/>
-<img src="docs/mock-ups/mlh.jpg" alt="image" width="200"/>
-<img src="docs/mock-ups/settings.jpg" alt="image" width="200"/>
+<img src="docs/mock-ups/card-design.png" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/login-screen.png" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/register-screen.png" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/side-bar.png" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/youtube.jpg" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/leaderboard.jpg" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/quiz-page.jpg" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/mlh.jpg" alt="image" width="200" height="377"/>
+<img src="docs/mock-ups/settings.jpg" alt="image" width="200" height="377"/>
 </p>
 
 <h2>Screen Flows</h2>
