@@ -39,7 +39,7 @@
 
 ---
 
-# Product Roadmap
+<h1>Product Roadmap</h1>
 <p float="left">
   <img src="docs/product-roadmap/roadmap.png" alt="image" width="2260"/>
 <p/>
@@ -74,34 +74,44 @@ Android Studio and/or xCode will also need to be installed in order to build the
 Once installed and working you can clone this repo with the following command
 `git clone https://github.com/Making-Updates/DSW-second-semester-project.git`
 
+
 After the repo has been cloned you need to open a terminal window (Powershell) inside the folder and run the following command
 `npm install`
 
+
 This will install all the required dependencies.
+
 
 After the dependencies are installed you are ready to start the application.
 
+
 Run the following command to start the application
 `ionic serve`
+
 
 Look in your terminal output and you will see the line
 `Listening on Port XXXX`
 Where `XXXX` is a number.
 
+
 Once you have the Port number you can navigate to
 `localhost:XXXX/`
+
 
 In order to build the application for a specific platform you need to run one of the following commands:
 `ionic capacitor add android` or `ionic capacitor add ios`
 
+
 The above command will create the initial files needed to build an app for the specific platform. Run the following command to ensure that your project files are synced for the platform you want to build for:
 `ionic capacitor copy android` or `ionic capacitor copy ios`
 
+
 After the files have sync you can open either Android Stuido or xCode to build the application.
 
-# Documentation
 
-## Tools used to build our application
+<h1>Documentation</h1>
+
+<h2>Tools used to build our application</h2>
 
 -   React
 -   React Bootstrap
@@ -111,7 +121,7 @@ After the files have sync you can open either Android Stuido or xCode to build t
 -   Supabase
 -   Axios
 
-## Explanation of how these tools are integrated in our application
+<h2>Explanation of how these tools are integrated in our application</h2>
 
 -   React is used to build our User Interface
 -   React Bootstrap is used to style our User Interface
@@ -121,9 +131,9 @@ After the files have sync you can open either Android Stuido or xCode to build t
 -   Supabase is our database provider
 -   Axios is used to make http requests to our backend API
 
-## Narratives
+<h2>Narratives</h2>
 
-### How users use our app
+<h3>How users use our app</h3>
 
 A user registers an account on our app to access tutorials, hackathons, software development news and compete with other programmers by taking quizzes. There is a leaderboard where the players can see their ranking.
 
@@ -158,7 +168,7 @@ A user registers an account on our app to access tutorials, hackathons, software
 
 Tech enthusiasts use our app to easily find toturials that will teach them how to complete programming tasks, access information easily and cut down on the time that they would rather be spending hopping from one source to another.
 
-## Explanation of our Database and UML Diagram
+<h2>Explanation of our Database and UML Diagram</h2>
 
 <p float="left">
   <img src="docs/uml/UML.png" alt="image" width="600"/>
@@ -348,3 +358,4 @@ We have developed a mobile application where users can view the latest hackathon
 <h5>Row Level Security Polices we have enabled</h5>
 
 <img src="docs/db-rls-policies.png" alt="image" />
+
