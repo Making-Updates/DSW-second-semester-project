@@ -1,4 +1,4 @@
-# Dev Central :star:
+# Dev Central <img src="docs/logo/devcentral.png" alt="image" />
 
 # Contents :book:
 
@@ -12,6 +12,7 @@
   - [Narratives](#narratives)
     - [How users use our app](#how-users-use-our-app)
   - [Explanation of our Database and UML Diagram](#explanation-of-our-database-and-uml-diagram)
+  - [Explanation of our relational model and ERD Diagram](#explanation-of-our-database-and-uml-diagram)
   - [Screen dumps of the application](#screen-dumps-of-the-application)
     - [Light Mode](#light-mode)
     - [Dark Mode](#dark-mode)
@@ -43,29 +44,29 @@
   <img src="docs/product-roadmap/roadmap.png" alt="image" width="2260"/>
 <p/>
 
-<h1>Group Members</h1>
+# Group Members
 
-| Team Member :family: 	| student Number :mortar_board: 	| Email address :e-mail:          	|
-|----------------------	|-------------------------------	|---------------------------------	|
-| Tiiso Senosha        	| 220003917                     	| theotiiso@gmail.com             	|
-| Lesego Temane        	| 219081209                     	| lesegogtemane@gmail.com         	|
-| Waaiez Kinnear       	| 219021671                     	| waaiez.kinnear10@gmail.com      	|
-| Alexis Makgeru       	| 220042401                     	| sebotsealexis@gmail.com         	|
-| Bonginkosi Nhantumbo 	| 217040604                     	| bonginkosi.li73@gmail.com       	|
-| Blessing Leso        	| 219089394                     	| blessingitlotlengleso@gmail.com 	|
+| Team Member :family: | student Number :mortar_board: | Email address :e-mail:          |
+| :------------------- | :---------------------------- | :------------------------------ |
+| Tiiso Senosha        | 220003917                     | theotiiso@gmail.com             |
+| Lesego Temane        | 219081209                     | lesegogtemane@gmail.com         |
+| Waaiez Kinnear       | 219021671                     | waaiez.kinnear10@gmail.com      |
+| Alexis Makgeru       | 220042401                     | sebotsealexis@gmail.com         |
+| Bonginkosi Nhantumbo | 217040604                     | bonginkosi.li73@gmail.com       |
+| Blessing Leso        | 219089394                     | blessingitlotlengleso@gmail.com |
 
-<h1>Group Member Tasks</h1>
+# Group Member Tasks
 
-| Group Member :family: 	| Tasks :pushpin:                                          	| Role :file_folder:                            	|
-|-----------------------	|----------------------------------------------------------	|-----------------------------------------------	|
-| Tiiso Senosha         	| Quiz Leaderboard, Styling                                	| Project Manager, Front-End Developer, Tester  	|
-| Lesego Temane         	| MLH Cards, Styling                                       	| Front-End Developer, Tester                   	|
-| Waaiez Kinnear        	| Quiz, Settings, Database Setup                           	| Lead Programmer, Full-Stack Developer, Tester 	|
-| Alexis Makgeru        	| Twitter Cards, Styling                                   	| Front-End Developer, Tester                   	|
-| Bonginkosi Nhantumbo  	| Login Page, Register Page, Update Password Page, Styling 	| Full-Stack Developer, Tester                  	|
-| Blessing Leso         	| YouTube Cards, Styling                                   	| Business Analyst, Front-End Developer         	|
+| Group Member :family: | Tasks :pushpin:                                          | Role :file_folder:                            |
+| :-------------------- | :------------------------------------------------------- | :-------------------------------------------- |
+| Tiiso Senosha         | Quiz Leaderboard, Styling                                | Project Manager, Front-End Developer, Tester  |
+| Lesego Temane         | MLH Cards, Styling                                       | Front-End Developer, Tester                   |
+| Waaiez Kinnear        | Quiz, Settings, Database Setup                           | Lead Programmer, Full-Stack Developer, Tester |
+| Alexis Makgeru        | Twitter Cards, Styling                                   | Front-End Developer, Tester                   |
+| Bonginkosi Nhantumbo  | Login Page, Register Page, Update Password Page, Styling | Full-Stack Developer, Tester                  |
+| Blessing Leso         | YouTube Cards, Styling                                   | Business Analyst, Front-End Developer         |
 
-<h1>How to install / Build our application</h1>
+# How to install / Build our application
 
 First you need NodeJS and the Ionic CLI installed.
 Android Studio and/or xCode will also need to be installed in order to build the mobile application counterparts.
@@ -170,7 +171,7 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 <h2>Explanation of our Database and UML Diagram</h2>
 
 <p float="left">
-  <img src="docs/UMLs.png" alt="image" width="600"/>
+  <img src="docs/uml/UML.png" alt="image" width="600"/>
 <p/>
 
 Our database contains the following tables:
@@ -180,6 +181,14 @@ Our database contains the following tables:
 
 <h3>Scores</h3>
 - The scores table contains the score details of users. When a user has finished taking a quiz we store their email address, the category of the quiz that they took and the difficulty level of their quiz. We then retrieve and display their details on the leader scoreboard together with their ranking.
+
+## Explanation of our relational model and ERD Diagram
+<p float="left">
+  <img src="docs/erd/ERD.png" alt="image" width="600"/>
+<p/>
+<p>
+  After the user has signed up, we store their username, in this case an email, in the database. We use the data from the Users table to log them in. Once signed in, many users have the option to take a quiz multiple times, we do not have any restriction on the number of quizzes they can take. We have three categories and three difficulty levels. The users have many options to choose from and once they have taken a quiz we record their score on the leaderboard. Our algorithm will display their score on the leaderboard that matches the category and difficulty of the quiz that they have taken. 
+</p>
 
 <h2>Screen dumps of the application</h2>
 
