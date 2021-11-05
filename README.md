@@ -38,12 +38,12 @@
 
 ---
 
-# Product Roadmap
+<h1>Product Roadmap</h1>
 <p float="left">
   <img src="docs/product-roadmap/roadmap.png" alt="image" width="2260"/>
 <p/>
 
-# Group Members
+<h1>Group Members</h1>
 
 | Team Member :family: 	| student Number :mortar_board: 	| Email address :e-mail:          	|
 |----------------------	|-------------------------------	|---------------------------------	|
@@ -54,7 +54,7 @@
 | Bonginkosi Nhantumbo 	| 217040604                     	| bonginkosi.li73@gmail.com       	|
 | Blessing Leso        	| 219089394                     	| blessingitlotlengleso@gmail.com 	|
 
-# Group Member Tasks
+<h1>Group Member Tasks</h1>
 
 | Group Member :family: 	| Tasks :pushpin:                                          	| Role :file_folder:                            	|
 |-----------------------	|----------------------------------------------------------	|-----------------------------------------------	|
@@ -65,7 +65,7 @@
 | Bonginkosi Nhantumbo  	| Login Page, Register Page, Update Password Page, Styling 	| Full-Stack Developer, Tester                  	|
 | Blessing Leso         	| YouTube Cards, Styling                                   	| Business Analyst, Front-End Developer         	|
 
-# How to install / Build our application
+<h1>How to install / Build our application</h1>
 
 First you need NodeJS and the Ionic CLI installed.
 Android Studio and/or xCode will also need to be installed in order to build the mobile application counterparts.
@@ -167,7 +167,7 @@ A user registers an account on our app to access tutorials, hackathons, software
 
 Tech enthusiasts use our app to easily find toturials that will teach them how to complete programming tasks, access information easily and cut down on the time that they would rather be spending hopping from one source to another.
 
-## Explanation of our Database and UML Diagram
+<h2>Explanation of our Database and UML Diagram</h2>
 
 <p float="left">
   <img src="docs/UMLs.png" alt="image" width="600"/>
