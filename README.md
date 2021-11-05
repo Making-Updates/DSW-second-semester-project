@@ -1,4 +1,6 @@
-# Dev Central <img src="docs/logo/devcentral.png" alt="image" />
+<img src="docs/logo/devcentral.png" alt="image"  height="50px" width="50px" />
+
+# Dev Central 
 
 # Contents :book:
 
@@ -173,7 +175,6 @@ Tech enthusiasts use our app to easily find toturials that will teach them how t
 <p float="left">
   <img src="docs/uml/UML.png" alt="image" width="600"/>
 <p/>
-
 Our database contains the following tables:
 
 <h3>Authentication</h3>
@@ -186,9 +187,7 @@ Our database contains the following tables:
 <p float="left">
   <img src="docs/erd/ERD.png" alt="image" width="600"/>
 <p/>
-<p>
-  After the user has signed up, we store their username, in this case an email, in the database. We use the data from the Users table to log them in. Once signed in, many users have the option to take a quiz multiple times, we do not have any restriction on the number of quizzes they can take. We have three categories and three difficulty levels. The users have many options to choose from and once they have taken a quiz we record their score on the leaderboard. Our algorithm will display their score on the leaderboard that matches the category and difficulty of the quiz that they have taken. 
-</p>
+After the user has signed up, we store their username, in this case an email, in the database. We use the data from the Users table to log them in. Once signed in, many users have the option to take a quiz multiple times, we do not have any restriction on the number of quizzes they can take. We have three categories and three difficulty levels. The users have many options to choose from and once they have taken a quiz we record their score on the leaderboard. Our algorithm will display their score on the leaderboard that matches the category and difficulty of the quiz that they have taken. 
 
 <h2>Screen dumps of the application</h2>
 
