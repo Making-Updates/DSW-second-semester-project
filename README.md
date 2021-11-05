@@ -349,3 +349,4 @@ We have developed a mobile application where users can view the latest hackathon
 <h5>Row Level Security Polices we have enabled</h5>
 
 <img src="docs/db-rls-policies.png" alt="image" />
+
