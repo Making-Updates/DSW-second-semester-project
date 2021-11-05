@@ -45,25 +45,25 @@
 
 # Group Members
 
-| Team Member :family: | student Number :mortar_board: | Email address :e-mail:          |
-| :------------------- | :---------------------------- | :------------------------------ |
-| Tiiso Senosha        | 220003917                     | theotiiso@gmail.com             |
-| Lesego Temane        | 219081209                     | lesegogtemane@gmail.com         |
-| Waaiez Kinnear       | 219021671                     | waaiez.kinnear10@gmail.com      |
-| Alexis Makgeru       | 220042401                     | sebotsealexis@gmail.com         |
-| Bonginkosi Nhantumbo | 217040604                     | bonginkosi.li73@gmail.com       |
-| Blessing Leso        | 219089394                     | blessingitlotlengleso@gmail.com |
+| Team Member :family: 	| student Number :mortar_board: 	| Email address :e-mail:          	|
+|----------------------	|-------------------------------	|---------------------------------	|
+| Tiiso Senosha        	| 220003917                     	| theotiiso@gmail.com             	|
+| Lesego Temane        	| 219081209                     	| lesegogtemane@gmail.com         	|
+| Waaiez Kinnear       	| 219021671                     	| waaiez.kinnear10@gmail.com      	|
+| Alexis Makgeru       	| 220042401                     	| sebotsealexis@gmail.com         	|
+| Bonginkosi Nhantumbo 	| 217040604                     	| bonginkosi.li73@gmail.com       	|
+| Blessing Leso        	| 219089394                     	| blessingitlotlengleso@gmail.com 	|
 
 # Group Member Tasks
 
-| Group Member :family: | Tasks :pushpin:                                          | Role :file_folder:                            |
-| :-------------------- | :------------------------------------------------------- | :-------------------------------------------- |
-| Tiiso Senosha         | Quiz Leaderboard, Styling                                | Project Manager, Front-End Developer, Tester  |
-| Lesego Temane         | MLH Cards, Styling                                       | Front-End Developer, Tester                   |
-| Waaiez Kinnear        | Quiz, Settings, Database Setup                           | Lead Programmer, Full-Stack Developer, Tester |
-| Alexis Makgeru        | Twitter Cards, Styling                                   | Front-End Developer, Tester                   |
-| Bonginkosi Nhantumbo  | Login Page, Register Page, Update Password Page, Styling | Full-Stack Developer, Tester                  |
-| Blessing Leso         | YouTube Cards, Styling                                   | Business Analyst, Front-End Developer         |
+| Group Member :family: 	| Tasks :pushpin:                                          	| Role :file_folder:                            	|
+|-----------------------	|----------------------------------------------------------	|-----------------------------------------------	|
+| Tiiso Senosha         	| Quiz Leaderboard, Styling                                	| Project Manager, Front-End Developer, Tester  	|
+| Lesego Temane         	| MLH Cards, Styling                                       	| Front-End Developer, Tester                   	|
+| Waaiez Kinnear        	| Quiz, Settings, Database Setup                           	| Lead Programmer, Full-Stack Developer, Tester 	|
+| Alexis Makgeru        	| Twitter Cards, Styling                                   	| Front-End Developer, Tester                   	|
+| Bonginkosi Nhantumbo  	| Login Page, Register Page, Update Password Page, Styling 	| Full-Stack Developer, Tester                  	|
+| Blessing Leso         	| YouTube Cards, Styling                                   	| Business Analyst, Front-End Developer         	|
 
 # How to install / Build our application
 
